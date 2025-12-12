@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View your project updates, documents, and communicate with the Nexus Tech team.">
+    <title>Client Dashboard | Nexus Tech Digital Solutions</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232563EB' rx='20' width='100' height='100'/><text x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>N</text></svg>">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Dashboard Navigation -->
+        <nav class="dashboard__nav">
+            <div class="container">
+                <div class="dashboard__nav-inner">
+                    <a href="index.html" class="nav__logo">
+                        <span class="nav__logo-icon">N</span>
+                        Nexus Tech
+                    </a>
+                    
+                    <div class="dashboard__user">
+                        <span id="userName" style="font-weight: 500;">Client</span>
+                        <div class="dashboard__avatar" id="userAvatar">C</div>
+                        <button id="logoutBtn" class="btn btn--outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Sign Out</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Dashboard Content -->
+        <div class="dashboard__content">
+            <div class="container">
+                <div class="dashboard__header">
+                    <h1>Welcome back, <span id="welcomeName">Client</span></h1>
+                    <p>Here's an overview of your projects and account.</p>
+                </div>
+                
+                <!-- Stats Cards -->
+                <div class="dashboard__cards">
+                    <div class="dashboard__card">
+                        <h3>Active Projects</h3>
+                        <div class="dashboard__card-value" id="activeCount">0</div>
+                    </div>
+                    <div class="dashboard__card">
+                        <h3>Pending Review</h3>
+                        <div class="dashboard__card-value" id="pendingCount">0</div>
+                    </div>
+                    <div class="dashboard__card">
+                        <h3>Completed</h3>
+                        <div class="dashboard__card-value" id="completedCount">0</div>
+                    </div>
+                </div>
+                
+                <!-- Projects List -->
+                <div class="dashboard__projects">
+                    <div class="dashboard__projects-header">
+                        <h2>Your Projects</h2>
+                        <a href="contact.html" class="btn btn--primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Request New Project</a>
+                    </div>
+                    
+                    <div id="projectsList">
+                        <!-- Demo Projects (shown when no Firebase data) -->
+                        <div class="dashboard__project">
+                            <div>
+                                <div class="dashboard__project-name">Business Website Redesign</div>
+                                <div style="font-size: 0.875rem; color: var(--color-gray-500);">Started Dec 1, 2024</div>
+                            </div>
+                            <span class="dashboard__project-status dashboard__project-status--active">In Progress</span>
+                        </div>
+                        
+                        <div class="dashboard__project">
+                            <div>
+                                <div class="dashboard__project-name">Mobile App MVP</div>
+                                <div style="font-size: 0.875rem; color: var(--color-gray-500);">Started Nov 15, 2024</div>
+                            </div>
+                            <span class="dashboard__project-status dashboard__project-status--pending">Under Review</span>
+                        </div>
+                        
+                        <div class="dashboard__project">
+                            <div>
+                                <div class="dashboard__project-name">Logo & Brand Package</div>
+                                <div style="font-size: 0.875rem; color: var(--color-gray-500);">Completed Oct 30, 2024</div>
+                            </div>
+                            <span class="dashboard__project-status dashboard__project-status--completed">Completed</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Actions -->
+                <div style="margin-top: 2.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                    <div class="dashboard__card">
+                        <h3 style="margin-bottom: 0.75rem;">Need Help?</h3>
+                        <p style="font-size: 0.875rem; color: var(--color-gray-600); margin-bottom: 1rem;">Have questions about your project? We're here to help.</p>
+                        <a href="contact.html" class="btn btn--outline" style="font-size: 0.875rem;">Contact Support</a>
+                    </div>
+                    
+                    <div class="dashboard__card">
+                        <h3 style="margin-bottom: 0.75rem;">Project Documents</h3>
+                        <p style="font-size: 0.875rem; color: var(--color-gray-600); margin-bottom: 1rem;">Access contracts, invoices, and project files.</p>
+                        <a href="#" class="btn btn--outline" style="font-size: 0.875rem;">View Documents</a>
+                    </div>
+                    
+                    <div class="dashboard__card">
+                        <h3 style="margin-bottom: 0.75rem;">Account Settings</h3>
+                        <p style="font-size: 0.875rem; color: var(--color-gray-600); margin-bottom: 1rem;">Update your profile and notification preferences.</p>
+                        <a href="#" class="btn btn--outline" style="font-size: 0.875rem;">Manage Account</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer style="background: var(--color-gray-100); padding: 1.5rem 0; margin-top: auto;">
+            <div class="container" style="text-align: center; font-size: 0.875rem; color: var(--color-gray-500);">
+                <p>&copy; 2024 Nexus Tech Digital Solutions. All rights reserved.</p>
+                <p style="margin-top: 0.5rem;">
+                    <a href="privacy.html" style="color: var(--color-gray-600);">Privacy Policy</a> · 
+                    <a href="terms.html" style="color: var(--color-gray-600);">Terms of Service</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
