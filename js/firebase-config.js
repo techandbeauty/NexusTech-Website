@@ -13,8 +13,9 @@ const firebaseConfig = {
     authDomain: "nexus-tech-ds-website.firebaseapp.com",
     projectId: "nexus-tech-ds-website",
     storageBucket: "nexus-tech-ds-website.firebasestorage.app",
-    messagingSenderId: "477aborting856636",
-    appId: "1:477856636:web:nexustech"
+    messagingSenderId: "363249530024",
+    appId: "1:363249530024:web:1a42c36a10f71ebf4fbe9d",
+    measurementId: "G-Q96W038P4G"
 };
 
 // Initialize Firebase
