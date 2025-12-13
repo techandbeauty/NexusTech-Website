@@ -21,18 +21,39 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232563EB' rx='20' width='100' height='100'/><text x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>N</text></svg>">
+    
+    <style>
+        .dashboard { min-height: 100vh; display: flex; flex-direction: column; background: #F8FAFC; }
+        .dashboard__nav { background: white; padding: 1rem 0; border-bottom: 1px solid #E2E8F0; }
+        .dashboard__nav-inner { display: flex; justify-content: space-between; align-items: center; }
+        .dashboard__user { display: flex; align-items: center; gap: 1rem; }
+        .dashboard__avatar { width: 40px; height: 40px; background: #2563EB; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; }
+        .dashboard__content { flex: 1; padding: 2rem 0; }
+        .dashboard__header { margin-bottom: 2rem; }
+        .dashboard__header h1 { font-family: 'DM Serif Display', serif; font-size: 1.75rem; color: #0F172A; margin-bottom: 0.5rem; }
+        .dashboard__header p { color: #64748B; }
+        .dashboard__cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+        .dashboard__card { background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .dashboard__card h3 { font-size: 0.875rem; color: #64748B; margin-bottom: 0.5rem; }
+        .dashboard__card-value { font-size: 2rem; font-weight: 700; color: #0F172A; }
+        .dashboard__projects { background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .dashboard__projects-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+        .dashboard__projects-header h2 { font-size: 1.125rem; color: #0F172A; }
+        .dashboard__project { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #E2E8F0; }
+        .dashboard__project:last-child { border-bottom: none; }
+        .dashboard__project-name { font-weight: 500; color: #0F172A; margin-bottom: 0.25rem; }
+        .dashboard__project-status { padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 500; }
+        .dashboard__project-status--active { background: #DBEAFE; color: #2563EB; }
+        .dashboard__project-status--pending { background: #FEF3C7; color: #D97706; }
+        .dashboard__project-status--completed { background: #DCFCE7; color: #16A34A; }
+    </style>
 </head>
 <body>
     <div class="dashboard">
-        <!-- Dashboard Navigation -->
         <nav class="dashboard__nav">
             <div class="container">
                 <div class="dashboard__nav-inner">
-                    <a href="index.html" class="nav__logo">
-                        <span class="nav__logo-icon">N</span>
-                        Nexus Tech
-                    </a>
-                    
+                    <a href="index.html" class="nav__logo"><span class="nav__logo-icon">N</span>Nexus Tech</a>
                     <div class="dashboard__user">
                         <span id="userName" style="font-weight: 500;">Client</span>
                         <div class="dashboard__avatar" id="userAvatar">C</div>
@@ -42,7 +63,6 @@
             </div>
         </nav>
         
-        <!-- Dashboard Content -->
         <div class="dashboard__content">
             <div class="container">
                 <div class="dashboard__header">
@@ -50,23 +70,12 @@
                     <p>Here's an overview of your projects and account.</p>
                 </div>
                 
-                <!-- Stats Cards -->
                 <div class="dashboard__cards">
-                    <div class="dashboard__card">
-                        <h3>Active Projects</h3>
-                        <div class="dashboard__card-value" id="activeCount">0</div>
-                    </div>
-                    <div class="dashboard__card">
-                        <h3>Pending Review</h3>
-                        <div class="dashboard__card-value" id="pendingCount">0</div>
-                    </div>
-                    <div class="dashboard__card">
-                        <h3>Completed</h3>
-                        <div class="dashboard__card-value" id="completedCount">0</div>
-                    </div>
+                    <div class="dashboard__card"><h3>Active Projects</h3><div class="dashboard__card-value" id="activeCount">0</div></div>
+                    <div class="dashboard__card"><h3>Pending Review</h3><div class="dashboard__card-value" id="pendingCount">0</div></div>
+                    <div class="dashboard__card"><h3>Completed</h3><div class="dashboard__card-value" id="completedCount">0</div></div>
                 </div>
                 
-                <!-- Projects List -->
                 <div class="dashboard__projects">
                     <div class="dashboard__projects-header">
                         <h2>Your Projects</h2>
@@ -74,69 +83,57 @@
                     </div>
                     
                     <div id="projectsList">
-                        <!-- Demo Projects (shown when no Firebase data) -->
                         <div class="dashboard__project">
                             <div>
                                 <div class="dashboard__project-name">Business Website Redesign</div>
-                                <div style="font-size: 0.875rem; color: var(--color-gray-500);">Started Dec 1, 2024</div>
+                                <div style="font-size: 0.875rem; color: #64748B;">Started Dec 1, 2024</div>
                             </div>
                             <span class="dashboard__project-status dashboard__project-status--active">In Progress</span>
                         </div>
-                        
                         <div class="dashboard__project">
                             <div>
                                 <div class="dashboard__project-name">Mobile App MVP</div>
-                                <div style="font-size: 0.875rem; color: var(--color-gray-500);">Started Nov 15, 2024</div>
+                                <div style="font-size: 0.875rem; color: #64748B;">Started Nov 15, 2024</div>
                             </div>
                             <span class="dashboard__project-status dashboard__project-status--pending">Under Review</span>
                         </div>
-                        
                         <div class="dashboard__project">
                             <div>
                                 <div class="dashboard__project-name">Logo & Brand Package</div>
-                                <div style="font-size: 0.875rem; color: var(--color-gray-500);">Completed Oct 30, 2024</div>
+                                <div style="font-size: 0.875rem; color: #64748B;">Completed Oct 30, 2024</div>
                             </div>
                             <span class="dashboard__project-status dashboard__project-status--completed">Completed</span>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Quick Actions -->
                 <div style="margin-top: 2.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
                     <div class="dashboard__card">
                         <h3 style="margin-bottom: 0.75rem;">Need Help?</h3>
-                        <p style="font-size: 0.875rem; color: var(--color-gray-600); margin-bottom: 1rem;">Have questions about your project? We're here to help.</p>
+                        <p style="font-size: 0.875rem; color: #64748B; margin-bottom: 1rem;">Have questions about your project?</p>
                         <a href="contact.html" class="btn btn--outline" style="font-size: 0.875rem;">Contact Support</a>
                     </div>
-                    
                     <div class="dashboard__card">
                         <h3 style="margin-bottom: 0.75rem;">Project Documents</h3>
-                        <p style="font-size: 0.875rem; color: var(--color-gray-600); margin-bottom: 1rem;">Access contracts, invoices, and project files.</p>
+                        <p style="font-size: 0.875rem; color: #64748B; margin-bottom: 1rem;">Access contracts and project files.</p>
                         <a href="#" class="btn btn--outline" style="font-size: 0.875rem;">View Documents</a>
                     </div>
-                    
                     <div class="dashboard__card">
                         <h3 style="margin-bottom: 0.75rem;">Account Settings</h3>
-                        <p style="font-size: 0.875rem; color: var(--color-gray-600); margin-bottom: 1rem;">Update your profile and notification preferences.</p>
+                        <p style="font-size: 0.875rem; color: #64748B; margin-bottom: 1rem;">Update your profile and preferences.</p>
                         <a href="#" class="btn btn--outline" style="font-size: 0.875rem;">Manage Account</a>
                     </div>
                 </div>
             </div>
         </div>
         
-        <!-- Footer -->
-        <footer style="background: var(--color-gray-100); padding: 1.5rem 0; margin-top: auto;">
-            <div class="container" style="text-align: center; font-size: 0.875rem; color: var(--color-gray-500);">
+        <footer style="background: #F1F5F9; padding: 1.5rem 0; margin-top: auto;">
+            <div class="container" style="text-align: center; font-size: 0.875rem; color: #64748B;">
                 <p>&copy; 2024 Nexus Tech Digital Solutions. All rights reserved.</p>
-                <p style="margin-top: 0.5rem;">
-                    <a href="privacy.html" style="color: var(--color-gray-600);">Privacy Policy</a> · 
-                    <a href="terms.html" style="color: var(--color-gray-600);">Terms of Service</a>
-                </p>
+                <p style="margin-top: 0.5rem;"><a href="privacy.html" style="color: #475569;">Privacy Policy</a> · <a href="terms.html" style="color: #475569;">Terms of Service</a></p>
             </div>
         </footer>
     </div>
-
-    <!-- Scripts -->
     <script src="js/main.js"></script>
 </body>
 </html>

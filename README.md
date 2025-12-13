@@ -1,117 +1,86 @@
 # Nexus Tech Digital Solutions Website
 
-A professional, modern website for Nexus Tech Digital Solutions featuring web development, app development, branding, and IT support services.
+Professional website for Nexus Tech Digital Solutions - a tech services company offering web development, app development, branding, and IT support.
 
 ## Features
 
-- ✅ Clean, professional design matching provided mockup
-- ✅ Fully responsive (mobile, tablet, desktop)
-- ✅ Firebase Authentication for client portal
-- ✅ Netlify Forms integration for contact forms
-- ✅ FAQ accordion functionality
-- ✅ Smooth scroll animations
-- ✅ SEO optimized
+- 📱 Fully responsive design
+- 🔐 Firebase Authentication (Google, Apple, Email/Password, Email Link)
+- 📝 Netlify Forms for contact submissions
+- 🖼️ Cloudinary image management (using tags)
+- 🎨 Modern design with DM Sans & DM Serif Display fonts
+- ⚡ Fast loading with optimized assets
+
+## Pages
+
+- `index.html` - Homepage
+- `about.html` - About page
+- `services.html` - Services offered
+- `portfolio.html` - Project portfolio (MARC, Tech Deck, Nexora, Codex Labs)
+- `faq.html` - Frequently asked questions
+- `contact.html` - Contact form (Netlify Forms)
+- `login.html` - Client portal login (Firebase Auth)
+- `portal.html` - Client dashboard
+- `reset-password.html` - Password reset
+- `thank-you.html` - Payment confirmation page
+- `privacy.html` - Privacy policy
+- `terms.html` - Terms of service
+
+## Setup Instructions
+
+### 1. Cloudinary Images
+See `CLOUDINARY-SETUP.md` for detailed instructions on setting up images.
+
+Quick steps:
+1. Create Cloudinary account at https://cloudinary.com
+2. Upload images with these tags: `nexus-hero`, `nexus-founder`, `nexus-marc`, `nexus-techdeck`, `nexus-nexora`, `nexus-codex`
+3. Find & Replace `YOUR_CLOUD_NAME` with your Cloudinary cloud name in all HTML files
+
+### 2. Firebase Configuration
+Firebase is already configured in `js/main.js` with these credentials:
+- Project: nexus-tech-ds-website
+- Auth methods: Google, Apple, Email/Password, Email Link
+
+### 3. Netlify Deployment
+1. Push to GitHub
+2. Connect repository to Netlify
+3. Set publish directory to root (or subfolder name if in subfolder)
+4. Enable form detection for contact form
+
+### 4. Stripe Payments (Optional)
+Update thank-you.html Google Form link if using different questionnaire.
 
 ## File Structure
 
 ```
 nexus-website/
-├── index.html          # Homepage
-├── about.html          # About page
-├── services.html       # Services overview
-├── portfolio.html      # Portfolio showcase
-├── faq.html            # FAQ page
-├── contact.html        # Contact form (Netlify Forms)
-├── login.html          # Client portal login
-├── portal.html         # Client dashboard
-├── reset-password.html # Password reset
-├── privacy.html        # Privacy policy
-├── terms.html          # Terms of service
 ├── css/
-│   └── styles.css      # All styles
+│   └── styles.css
 ├── js/
-│   └── main.js         # All JavaScript
-├── netlify.toml        # Netlify configuration
-└── README.md           # This file
+│   └── main.js
+├── images/
+│   └── .gitkeep
+├── index.html
+├── about.html
+├── services.html
+├── portfolio.html
+├── faq.html
+├── contact.html
+├── login.html
+├── portal.html
+├── reset-password.html
+├── thank-you.html
+├── privacy.html
+├── terms.html
+├── netlify.toml
+├── CLOUDINARY-SETUP.md
+└── README.md
 ```
 
-## Setup Instructions
+## Contact
 
-### 1. Deploy to Netlify
+- Email: info@nexustechdigitalsolutions.net
+- Phone: (202) 709-4556
+- Location: Norfolk, Virginia
 
-1. Go to [netlify.com](https://netlify.com) and sign up/login
-2. Click "Add new site" → "Deploy manually"
-3. Drag and drop the entire `nexus-website` folder
-4. Your site will be live at a random URL (you can customize this)
-
-### 2. Configure Firebase (for Client Portal)
-
-1. Go to [Firebase Console](https://console.firebase.google.com)
-2. Create a new project
-3. Enable Authentication → Email/Password
-4. Enable Firestore Database
-5. Go to Project Settings → General → Your apps → Add web app
-6. Copy the configuration and update `js/main.js`:
-
-```javascript
-const firebaseConfig = {
-    apiKey: "YOUR_ACTUAL_API_KEY",
-    authDomain: "YOUR_PROJECT.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT.appspot.com",
-    messagingSenderId: "YOUR_SENDER_ID",
-    appId: "YOUR_APP_ID"
-};
-```
-
-### 3. Enable Netlify Forms
-
-Netlify automatically detects forms with `data-netlify="true"`. To view submissions:
-1. Go to your Netlify dashboard
-2. Select your site
-3. Go to "Forms" in the sidebar
-4. You'll see all form submissions there
-
-### 4. Customize Content
-
-1. **Images**: Replace placeholder images in the HTML files
-   - Add a professional headshot in the About section
-   - Add project screenshots in the Portfolio section
-   - Add a hero image on the homepage
-
-2. **Contact Info**: Update email addresses and social links
-   - Search for `@nexustechsolutions.com` and update
-   - Update social media links in the footer
-
-3. **Pricing**: Update pricing ranges in `services.html` if needed
-
-## Customization
-
-### Colors
-Edit CSS custom properties in `css/styles.css`:
-
-```css
-:root {
-    --color-primary: #0F172A;      /* Navy blue */
-    --color-accent: #2563EB;        /* Blue */
-    --color-success: #059669;       /* Green */
-}
-```
-
-### Fonts
-Currently using:
-- DM Serif Display (headings)
-- DM Sans (body)
-
-To change, update the Google Fonts link in all HTML files and the CSS variables.
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## License
-
-© 2024 Nexus Tech Digital Solutions. All rights reserved.
+© 2024 Nexus Tech Digital Solutions

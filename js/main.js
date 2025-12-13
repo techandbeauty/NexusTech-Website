@@ -1,536 +1,481 @@
-/* ==========================================================================
-   NEXUS TECH DIGITAL SOLUTIONS - Main JavaScript
-   Navigation, Forms, Firebase Auth, Animations
-   ========================================================================== */
+/**
+ * Nexus Tech Digital Solutions
+ * Main JavaScript File
+ * 
+ * Includes:
+ * - Navigation functionality
+ * - Firebase Authentication (Google, Apple, Email/Password, Email Link)
+ * - Form handling
+ * - FAQ accordion
+ */
 
-// ==========================================================================
-// Navigation
-// ==========================================================================
+// ============================================
+// NAVIGATION
+// ============================================
 
 document.addEventListener('DOMContentLoaded', function() {
-    const nav = document.getElementById('nav');
+    // Mobile menu toggle
     const navToggle = document.getElementById('navToggle');
     const mobileMenu = document.getElementById('mobileMenu');
-
-    // Scroll behavior for nav
-    if (nav) {
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
-        });
-    }
-
-    // Mobile menu toggle
+    const nav = document.getElementById('nav');
+    
     if (navToggle && mobileMenu) {
         navToggle.addEventListener('click', function() {
             navToggle.classList.toggle('active');
             mobileMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
         });
-
-        // Close mobile menu when clicking a link
+        
+        // Close menu when clicking a link
         const mobileLinks = mobileMenu.querySelectorAll('.mobile-menu__link');
         mobileLinks.forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', () => {
                 navToggle.classList.remove('active');
                 mobileMenu.classList.remove('active');
+                document.body.classList.remove('menu-open');
             });
         });
     }
+    
+    // Sticky navigation
+    if (nav) {
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                nav.classList.add('nav--scrolled');
+            } else {
+                nav.classList.remove('nav--scrolled');
+            }
+            
+            lastScroll = currentScroll;
+        });
+    }
+    
+    // Initialize FAQ accordion
+    initFAQ();
+    
+    // Initialize Firebase if SDK is loaded
+    if (typeof firebase !== 'undefined') {
+        initFirebase();
+    }
 });
 
-// ==========================================================================
-// FAQ Accordion
-// ==========================================================================
+// ============================================
+// FAQ ACCORDION
+// ============================================
 
-document.addEventListener('DOMContentLoaded', function() {
+function initFAQ() {
     const faqItems = document.querySelectorAll('.faq-item');
-
+    
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-item__question');
+        const answer = item.querySelector('.faq-item__answer');
         
-        if (question) {
-            question.addEventListener('click', function() {
-                // Close other items
+        if (question && answer) {
+            question.addEventListener('click', () => {
+                const isOpen = item.classList.contains('active');
+                
+                // Close all other items
                 faqItems.forEach(otherItem => {
                     if (otherItem !== item) {
                         otherItem.classList.remove('active');
                     }
                 });
-
+                
                 // Toggle current item
                 item.classList.toggle('active');
             });
         }
     });
-});
-
-// ==========================================================================
-// Scroll Animations
-// ==========================================================================
-
-document.addEventListener('DOMContentLoaded', function() {
-    const animateElements = document.querySelectorAll('.animate-on-scroll');
-
-    if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-fade-in-up');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        });
-
-        animateElements.forEach(el => observer.observe(el));
-    } else {
-        // Fallback for browsers that don't support IntersectionObserver
-        animateElements.forEach(el => el.classList.add('animate-fade-in-up'));
-    }
-});
-
-// ==========================================================================
-// Smooth Scroll for Anchor Links
-// ==========================================================================
-
-document.addEventListener('DOMContentLoaded', function() {
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
-
-    anchorLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            
-            if (href !== '#') {
-                const target = document.querySelector(href);
-                
-                if (target) {
-                    e.preventDefault();
-                    const navHeight = document.getElementById('nav')?.offsetHeight || 80;
-                    const targetPosition = target.offsetTop - navHeight - 20;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-        });
-    });
-});
-
-// ==========================================================================
-// Form Validation (for Netlify Forms)
-// ==========================================================================
-
-document.addEventListener('DOMContentLoaded', function() {
-    const forms = document.querySelectorAll('form[data-netlify="true"]');
-
-    forms.forEach(form => {
-        form.addEventListener('submit', function(e) {
-            const requiredFields = form.querySelectorAll('[required]');
-            let isValid = true;
-
-            requiredFields.forEach(field => {
-                // Remove previous error state
-                field.classList.remove('error');
-                
-                if (!field.value.trim()) {
-                    isValid = false;
-                    field.classList.add('error');
-                }
-
-                // Email validation
-                if (field.type === 'email' && field.value) {
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!emailRegex.test(field.value)) {
-                        isValid = false;
-                        field.classList.add('error');
-                    }
-                }
-            });
-
-            if (!isValid) {
-                e.preventDefault();
-                // Show first error
-                const firstError = form.querySelector('.error');
-                if (firstError) {
-                    firstError.focus();
-                }
-            }
-        });
-    });
-});
-
-// ==========================================================================
-// Firebase Authentication
-// ==========================================================================
-
-// Firebase configuration - Replace with your actual config
-const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT.appspot.com",
-    messagingSenderId: "YOUR_SENDER_ID",
-    appId: "YOUR_APP_ID"
-};
-
-// Initialize Firebase (only if Firebase SDK is loaded)
-let auth = null;
-let db = null;
-
-function initializeFirebase() {
-    if (typeof firebase !== 'undefined') {
-        firebase.initializeApp(firebaseConfig);
-        auth = firebase.auth();
-        db = firebase.firestore();
-        
-        // Auth state observer
-        auth.onAuthStateChanged(handleAuthStateChange);
-    }
 }
 
-function handleAuthStateChange(user) {
-    const loginPage = document.querySelector('.login');
-    const dashboardPage = document.querySelector('.dashboard');
-    
-    if (user) {
-        // User is signed in
-        console.log('User signed in:', user.email);
-        
-        // If on login page, redirect to dashboard
-        if (loginPage && window.location.pathname.includes('login')) {
-            window.location.href = 'portal.html';
-        }
-        
-        // Update dashboard with user info
-        if (dashboardPage) {
-            updateDashboardUser(user);
-            loadUserProjects(user.uid);
-        }
-    } else {
-        // User is signed out
-        console.log('User signed out');
-        
-        // If on protected page, redirect to login
-        if (dashboardPage) {
-            window.location.href = 'login.html';
-        }
-    }
-}
+// ============================================
+// FIREBASE CONFIGURATION
+// ============================================
 
-function updateDashboardUser(user) {
-    const userNameEl = document.getElementById('userName');
-    const userAvatarEl = document.getElementById('userAvatar');
-    const welcomeNameEl = document.getElementById('welcomeName');
-    
-    if (userNameEl) {
-        userNameEl.textContent = user.displayName || user.email;
-    }
-    
-    if (userAvatarEl) {
-        userAvatarEl.textContent = (user.displayName || user.email).charAt(0).toUpperCase();
-    }
-    
-    if (welcomeNameEl) {
-        welcomeNameEl.textContent = user.displayName ? user.displayName.split(' ')[0] : 'there';
-    }
-}
-
-async function loadUserProjects(userId) {
-    if (!db) return;
-    
-    const projectsList = document.getElementById('projectsList');
-    const projectsCount = document.getElementById('projectsCount');
-    
-    try {
-        const snapshot = await db.collection('projects')
-            .where('userId', '==', userId)
-            .orderBy('createdAt', 'desc')
-            .get();
-        
-        const projects = [];
-        snapshot.forEach(doc => {
-            projects.push({ id: doc.id, ...doc.data() });
-        });
-        
-        if (projectsCount) {
-            projectsCount.textContent = projects.length;
-        }
-        
-        if (projectsList) {
-            if (projects.length === 0) {
-                projectsList.innerHTML = `
-                    <div class="dashboard__project">
-                        <span class="dashboard__project-name">No projects yet</span>
-                    </div>
-                `;
-            } else {
-                projectsList.innerHTML = projects.map(project => `
-                    <div class="dashboard__project">
-                        <span class="dashboard__project-name">${project.name}</span>
-                        <span class="dashboard__project-status dashboard__project-status--${project.status}">
-                            ${project.status.charAt(0).toUpperCase() + project.status.slice(1)}
-                        </span>
-                    </div>
-                `).join('');
-            }
-        }
-    } catch (error) {
-        console.error('Error loading projects:', error);
-    }
-}
-
-// ==========================================================================
-// Login Form Handler
-// ==========================================================================
-
-document.addEventListener('DOMContentLoaded', function() {
-    const loginForm = document.getElementById('loginForm');
-    const loginError = document.getElementById('loginError');
-    
-    if (loginForm) {
-        loginForm.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const submitBtn = loginForm.querySelector('button[type="submit"]');
-            
-            // Clear previous errors
-            if (loginError) loginError.classList.remove('active');
-            
-            // Disable button
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Signing in...';
-            
-            try {
-                if (auth) {
-                    await auth.signInWithEmailAndPassword(email, password);
-                    // Redirect handled by auth state observer
-                } else {
-                    // Demo mode without Firebase
-                    console.log('Demo login:', email);
-                    window.location.href = 'portal.html';
-                }
-            } catch (error) {
-                console.error('Login error:', error);
-                
-                if (loginError) {
-                    loginError.textContent = getAuthErrorMessage(error.code);
-                    loginError.classList.add('active');
-                }
-                
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Sign In';
-            }
-        });
-    }
-});
-
-// ==========================================================================
-// Signup Form Handler
-// ==========================================================================
-
-document.addEventListener('DOMContentLoaded', function() {
-    const signupForm = document.getElementById('signupForm');
-    const signupError = document.getElementById('signupError');
-    
-    if (signupForm) {
-        signupForm.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirmPassword').value;
-            const submitBtn = signupForm.querySelector('button[type="submit"]');
-            
-            // Clear previous errors
-            if (signupError) signupError.classList.remove('active');
-            
-            // Validate passwords match
-            if (password !== confirmPassword) {
-                if (signupError) {
-                    signupError.textContent = 'Passwords do not match.';
-                    signupError.classList.add('active');
-                }
-                return;
-            }
-            
-            // Validate password strength
-            if (password.length < 8) {
-                if (signupError) {
-                    signupError.textContent = 'Password must be at least 8 characters.';
-                    signupError.classList.add('active');
-                }
-                return;
-            }
-            
-            // Disable button
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Creating account...';
-            
-            try {
-                if (auth) {
-                    const userCredential = await auth.createUserWithEmailAndPassword(email, password);
-                    
-                    // Update profile with name
-                    await userCredential.user.updateProfile({
-                        displayName: name
-                    });
-                    
-                    // Create user document in Firestore
-                    if (db) {
-                        await db.collection('users').doc(userCredential.user.uid).set({
-                            name: name,
-                            email: email,
-                            createdAt: firebase.firestore.FieldValue.serverTimestamp()
-                        });
-                    }
-                    
-                    // Redirect handled by auth state observer
-                } else {
-                    // Demo mode without Firebase
-                    console.log('Demo signup:', name, email);
-                    window.location.href = 'portal.html';
-                }
-            } catch (error) {
-                console.error('Signup error:', error);
-                
-                if (signupError) {
-                    signupError.textContent = getAuthErrorMessage(error.code);
-                    signupError.classList.add('active');
-                }
-                
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Create Account';
-            }
-        });
-    }
-});
-
-// ==========================================================================
-// Logout Handler
-// ==========================================================================
-
-document.addEventListener('DOMContentLoaded', function() {
-    const logoutBtn = document.getElementById('logoutBtn');
-    
-    if (logoutBtn) {
-        logoutBtn.addEventListener('click', async function(e) {
-            e.preventDefault();
-            
-            try {
-                if (auth) {
-                    await auth.signOut();
-                }
-                window.location.href = 'login.html';
-            } catch (error) {
-                console.error('Logout error:', error);
-            }
-        });
-    }
-});
-
-// ==========================================================================
-// Password Reset Handler
-// ==========================================================================
-
-document.addEventListener('DOMContentLoaded', function() {
-    const resetForm = document.getElementById('resetForm');
-    const resetError = document.getElementById('resetError');
-    const resetSuccess = document.getElementById('resetSuccess');
-    
-    if (resetForm) {
-        resetForm.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const email = document.getElementById('email').value;
-            const submitBtn = resetForm.querySelector('button[type="submit"]');
-            
-            // Clear previous messages
-            if (resetError) resetError.classList.remove('active');
-            if (resetSuccess) resetSuccess.classList.remove('active');
-            
-            // Disable button
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
-            
-            try {
-                if (auth) {
-                    await auth.sendPasswordResetEmail(email);
-                }
-                
-                if (resetSuccess) {
-                    resetSuccess.textContent = 'Password reset email sent. Check your inbox.';
-                    resetSuccess.classList.add('active');
-                }
-                
-                submitBtn.textContent = 'Email Sent';
-            } catch (error) {
-                console.error('Reset error:', error);
-                
-                if (resetError) {
-                    resetError.textContent = getAuthErrorMessage(error.code);
-                    resetError.classList.add('active');
-                }
-                
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Send Reset Link';
-            }
-        });
-    }
-});
-
-// ==========================================================================
-// Helper Functions
-// ==========================================================================
-
-function getAuthErrorMessage(code) {
-    const errorMessages = {
-        'auth/invalid-email': 'Invalid email address.',
-        'auth/user-disabled': 'This account has been disabled.',
-        'auth/user-not-found': 'No account found with this email.',
-        'auth/wrong-password': 'Incorrect password.',
-        'auth/email-already-in-use': 'An account with this email already exists.',
-        'auth/weak-password': 'Password is too weak.',
-        'auth/too-many-requests': 'Too many attempts. Please try again later.',
-        'auth/network-request-failed': 'Network error. Check your connection.'
+function initFirebase() {
+    // Firebase configuration
+    // =============================================
+    // UPDATE THESE VALUES WITH YOUR FIREBASE CONFIG
+    // =============================================
+    const firebaseConfig = {
+        apiKey: "AIzaSyBt0RLkHSe0R5164VsaT93Hb-T_nTUw1AY",
+        authDomain: "nexus-tech-ds-website.firebaseapp.com",
+        projectId: "nexus-tech-ds-website",
+        storageBucket: "nexus-tech-ds-website.firebasestorage.app",
+        messagingSenderId: "363249530024",
+        appId: "1:363249530024:web:1a42c36a10f71ebf4fbe9d",
+        measurementId: "G-Q96W038P4G"
     };
     
-    return errorMessages[code] || 'An error occurred. Please try again.';
-}
-
-// ==========================================================================
-// Contact Form Success Handler (for Netlify)
-// ==========================================================================
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Check if redirected from successful form submission
-    const urlParams = new URLSearchParams(window.location.search);
+    // Initialize Firebase
+    if (!firebase.apps.length) {
+        firebase.initializeApp(firebaseConfig);
+    }
     
-    if (urlParams.get('success') === 'true') {
-        const successMessage = document.getElementById('formSuccess');
-        if (successMessage) {
-            successMessage.style.display = 'block';
-            successMessage.scrollIntoView({ behavior: 'smooth' });
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    
+    // ============================================
+    // AUTH STATE OBSERVER
+    // ============================================
+    
+    auth.onAuthStateChanged((user) => {
+        if (user) {
+            // User is signed in
+            console.log('User signed in:', user.email);
+            
+            // If on login page, redirect to portal
+            if (window.location.pathname.includes('login.html')) {
+                window.location.href = 'portal.html';
+            }
+            
+            // Update portal UI if on portal page
+            if (window.location.pathname.includes('portal.html')) {
+                updatePortalUI(user);
+            }
+        } else {
+            // User is signed out
+            console.log('User signed out');
+            
+            // If on portal page, redirect to login
+            if (window.location.pathname.includes('portal.html')) {
+                window.location.href = 'login.html';
+            }
+        }
+    });
+    
+    // Check for email link sign-in on page load
+    checkEmailLinkSignIn();
+    
+    // ============================================
+    // LOGIN PAGE EVENT LISTENERS
+    // ============================================
+    
+    // Google Sign-In
+    const googleBtn = document.getElementById('googleSignIn');
+    if (googleBtn) {
+        googleBtn.addEventListener('click', signInWithGoogle);
+    }
+    
+    // Apple Sign-In
+    const appleBtn = document.getElementById('appleSignIn');
+    if (appleBtn) {
+        appleBtn.addEventListener('click', signInWithApple);
+    }
+    
+    // Email/Password Sign-In
+    const loginForm = document.getElementById('loginForm');
+    if (loginForm) {
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            signInWithEmail(email, password);
+        });
+    }
+    
+    // Email Link Sign-In
+    const emailLinkBtn = document.getElementById('emailLinkSignIn');
+    if (emailLinkBtn) {
+        emailLinkBtn.addEventListener('click', () => {
+            const email = document.getElementById('email').value;
+            if (email) {
+                sendSignInLink(email);
+            } else {
+                showError('loginError', 'Please enter your email address first.');
+            }
+        });
+    }
+    
+    // Password Reset
+    const resetForm = document.getElementById('resetForm');
+    if (resetForm) {
+        resetForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            sendPasswordReset(email);
+        });
+    }
+    
+    // Logout
+    const logoutBtn = document.getElementById('logoutBtn');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', signOut);
+    }
+    
+    // ============================================
+    // AUTHENTICATION FUNCTIONS
+    // ============================================
+    
+    // Google Sign-In
+    window.signInWithGoogle = async function() {
+        try {
+            const provider = new firebase.auth.GoogleAuthProvider();
+            provider.addScope('email');
+            provider.addScope('profile');
+            
+            const result = await auth.signInWithPopup(provider);
+            await createUserProfile(result.user, 'google');
+            
+        } catch (error) {
+            console.error('Google sign-in error:', error);
+            showError('loginError', getErrorMessage(error.code));
+        }
+    };
+    
+    // Apple Sign-In
+    window.signInWithApple = async function() {
+        try {
+            const provider = new firebase.auth.OAuthProvider('apple.com');
+            provider.addScope('email');
+            provider.addScope('name');
+            
+            const result = await auth.signInWithPopup(provider);
+            await createUserProfile(result.user, 'apple');
+            
+        } catch (error) {
+            console.error('Apple sign-in error:', error);
+            showError('loginError', getErrorMessage(error.code));
+        }
+    };
+    
+    // Email/Password Sign-In
+    window.signInWithEmail = async function(email, password) {
+        try {
+            const result = await auth.signInWithEmailAndPassword(email, password);
+            console.log('Email sign-in successful');
+            
+        } catch (error) {
+            console.error('Email sign-in error:', error);
+            showError('loginError', getErrorMessage(error.code));
+        }
+    };
+    
+    // Create Account with Email
+    window.createAccountWithEmail = async function(email, password, name) {
+        try {
+            const result = await auth.createUserWithEmailAndPassword(email, password);
+            
+            // Update display name
+            await result.user.updateProfile({ displayName: name });
+            
+            await createUserProfile(result.user, 'email');
+            
+        } catch (error) {
+            console.error('Account creation error:', error);
+            showError('loginError', getErrorMessage(error.code));
+        }
+    };
+    
+    // Email Link (Passwordless) Sign-In
+    window.sendSignInLink = async function(email) {
+        const actionCodeSettings = {
+            url: window.location.origin + '/portal.html',
+            handleCodeInApp: true
+        };
+        
+        try {
+            await auth.sendSignInLinkToEmail(email, actionCodeSettings);
+            
+            // Save email for later verification
+            window.localStorage.setItem('emailForSignIn', email);
+            
+            showSuccess('loginError', 'Check your email! We sent you a sign-in link.');
+            
+        } catch (error) {
+            console.error('Email link error:', error);
+            showError('loginError', getErrorMessage(error.code));
+        }
+    };
+    
+    // Check for Email Link Sign-In
+    window.checkEmailLinkSignIn = async function() {
+        if (auth.isSignInWithEmailLink(window.location.href)) {
+            let email = window.localStorage.getItem('emailForSignIn');
+            
+            if (!email) {
+                email = window.prompt('Please enter your email for confirmation:');
+            }
+            
+            try {
+                const result = await auth.signInWithEmailLink(email, window.location.href);
+                
+                // Clear saved email
+                window.localStorage.removeItem('emailForSignIn');
+                
+                await createUserProfile(result.user, 'emailLink');
+                
+            } catch (error) {
+                console.error('Email link sign-in error:', error);
+                showError('loginError', getErrorMessage(error.code));
+            }
+        }
+    };
+    
+    // Password Reset
+    window.sendPasswordReset = async function(email) {
+        try {
+            await auth.sendPasswordResetEmail(email);
+            showSuccess('resetSuccess', 'Password reset email sent! Check your inbox.');
+            
+        } catch (error) {
+            console.error('Password reset error:', error);
+            showError('resetError', getErrorMessage(error.code));
+        }
+    };
+    
+    // Sign Out
+    window.signOut = async function() {
+        try {
+            await auth.signOut();
+            window.location.href = 'login.html';
+        } catch (error) {
+            console.error('Sign out error:', error);
+        }
+    };
+    
+    // ============================================
+    // HELPER FUNCTIONS
+    // ============================================
+    
+    // Create/Update User Profile in Firestore
+    async function createUserProfile(user, provider) {
+        const userRef = db.collection('users').doc(user.uid);
+        
+        try {
+            const doc = await userRef.get();
+            
+            if (!doc.exists) {
+                // Create new user profile
+                await userRef.set({
+                    email: user.email,
+                    displayName: user.displayName || '',
+                    photoURL: user.photoURL || '',
+                    provider: provider,
+                    createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+                    lastLogin: firebase.firestore.FieldValue.serverTimestamp()
+                });
+            } else {
+                // Update last login
+                await userRef.update({
+                    lastLogin: firebase.firestore.FieldValue.serverTimestamp()
+                });
+            }
+        } catch (error) {
+            console.error('Error creating user profile:', error);
         }
     }
-});
-
-// ==========================================================================
-// Initialize
-// ==========================================================================
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Firebase if SDK is loaded
-    if (typeof firebase !== 'undefined') {
-        initializeFirebase();
+    
+    // Update Portal UI with user info
+    function updatePortalUI(user) {
+        const userName = document.getElementById('userName');
+        const welcomeName = document.getElementById('welcomeName');
+        const userAvatar = document.getElementById('userAvatar');
+        
+        const displayName = user.displayName || user.email.split('@')[0];
+        const initials = displayName.charAt(0).toUpperCase();
+        
+        if (userName) userName.textContent = displayName;
+        if (welcomeName) welcomeName.textContent = displayName.split(' ')[0];
+        if (userAvatar) userAvatar.textContent = initials;
+        
+        // Update demo stats
+        const activeCount = document.getElementById('activeCount');
+        const pendingCount = document.getElementById('pendingCount');
+        const completedCount = document.getElementById('completedCount');
+        
+        if (activeCount) activeCount.textContent = '1';
+        if (pendingCount) pendingCount.textContent = '1';
+        if (completedCount) completedCount.textContent = '1';
     }
+    
+    // Show error message
+    function showError(elementId, message) {
+        const errorEl = document.getElementById(elementId);
+        if (errorEl) {
+            errorEl.textContent = message;
+            errorEl.style.display = 'block';
+            errorEl.style.background = '#FEF2F2';
+            errorEl.style.borderColor = '#FECACA';
+            errorEl.style.color = '#DC2626';
+        }
+    }
+    
+    // Show success message
+    function showSuccess(elementId, message) {
+        const el = document.getElementById(elementId);
+        if (el) {
+            el.textContent = message;
+            el.style.display = 'block';
+            el.style.background = '#DCFCE7';
+            el.style.borderColor = '#86EFAC';
+            el.style.color = '#166534';
+        }
+    }
+    
+    // Get user-friendly error message
+    function getErrorMessage(errorCode) {
+        const errorMessages = {
+            'auth/invalid-email': 'Please enter a valid email address.',
+            'auth/user-disabled': 'This account has been disabled. Please contact support.',
+            'auth/user-not-found': 'No account found with this email. Please check your email or contact us to get started.',
+            'auth/wrong-password': 'Incorrect password. Please try again or reset your password.',
+            'auth/email-already-in-use': 'An account with this email already exists.',
+            'auth/weak-password': 'Password should be at least 6 characters.',
+            'auth/too-many-requests': 'Too many failed attempts. Please try again later.',
+            'auth/popup-closed-by-user': 'Sign-in was cancelled. Please try again.',
+            'auth/popup-blocked': 'Sign-in popup was blocked. Please allow popups for this site.',
+            'auth/account-exists-with-different-credential': 'An account already exists with this email using a different sign-in method.',
+            'auth/operation-not-allowed': 'This sign-in method is not enabled. Please contact support.',
+            'auth/invalid-action-code': 'The sign-in link has expired or already been used. Please request a new one.',
+            'auth/expired-action-code': 'The sign-in link has expired. Please request a new one.'
+        };
+        
+        return errorMessages[errorCode] || 'An error occurred. Please try again.';
+    }
+}
+
+// ============================================
+// FORM VALIDATION (for contact form)
+// ============================================
+
+function validateForm(form) {
+    let isValid = true;
+    const requiredFields = form.querySelectorAll('[required]');
+    
+    requiredFields.forEach(field => {
+        if (!field.value.trim()) {
+            isValid = false;
+            field.classList.add('error');
+        } else {
+            field.classList.remove('error');
+        }
+    });
+    
+    return isValid;
+}
+
+// ============================================
+// SMOOTH SCROLL
+// ============================================
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        
+        if (href !== '#') {
+            e.preventDefault();
+            
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    });
 });
