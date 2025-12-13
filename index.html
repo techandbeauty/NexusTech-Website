@@ -3,23 +3,267 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus Tech Digital Solutions</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0F172A; color: white; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
-        .container { text-align: center; padding: 2rem; }
-        h1 { font-size: 3rem; margin-bottom: 1rem; }
-        p { font-size: 1.25rem; color: #94A3B8; margin-bottom: 2rem; }
-        .btn { display: inline-block; background: #2563EB; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; margin: 0.5rem; }
-        .btn:hover { background: #1D4ED8; }
-    </style>
+    <meta name="description" content="Nexus Tech Digital Solutions - Professional web development, mobile apps, game development, and technical support services.">
+    <title>Nexus Tech Digital Solutions | Web & Mobile Development</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232563EB' rx='20' width='100' height='100'/><text x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>N</text></svg>">
 </head>
 <body>
-    <div class="container">
-        <h1>🚀 Nexus Tech Digital Solutions</h1>
-        <p>Website is loading... If you see this, deployment works!</p>
-        <a href="login.html" class="btn">Client Login</a>
-        <a href="contact.html" class="btn">Contact Us</a>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="container">
+            <div class="nav__inner">
+                <a href="index.html" class="nav__logo">
+                    <span class="nav__logo-icon">N</span>
+                    Nexus Tech
+                </a>
+                
+                <ul class="nav__menu">
+                    <li><a href="index.html" class="nav__link nav__link--active">Home</a></li>
+                    <li><a href="services.html" class="nav__link">Services</a></li>
+                    <li><a href="portfolio.html" class="nav__link">Portfolio</a></li>
+                    <li><a href="about.html" class="nav__link">About</a></li>
+                    <li><a href="contact.html" class="nav__link">Contact</a></li>
+                </ul>
+                
+                <div class="nav__actions">
+                    <a href="login.html" class="btn btn--outline">Client Login</a>
+                    <a href="contact.html" class="btn btn--primary">Get Started</a>
+                </div>
+                
+                <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu__inner">
+            <a href="index.html" class="mobile-menu__link mobile-menu__link--active">Home</a>
+            <a href="services.html" class="mobile-menu__link">Services</a>
+            <a href="portfolio.html" class="mobile-menu__link">Portfolio</a>
+            <a href="about.html" class="mobile-menu__link">About</a>
+            <a href="contact.html" class="mobile-menu__link">Contact</a>
+            <a href="login.html" class="mobile-menu__link">Client Login</a>
+            <a href="contact.html" class="btn btn--primary" style="margin-top: 1rem;">Get Started</a>
+        </div>
     </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__content">
+                <h1 class="hero__title">We Build Digital Solutions That <span class="text-gradient">Drive Results</span></h1>
+                <p class="hero__subtitle">From stunning websites to powerful mobile apps, we transform your ideas into digital reality. Professional development services tailored to your business needs.</p>
+                <div class="hero__actions">
+                    <a href="contact.html" class="btn btn--primary btn--lg">Start Your Project</a>
+                    <a href="portfolio.html" class="btn btn--outline btn--lg">View Our Work</a>
+                </div>
+            </div>
+            <div class="hero__image">
+                <img src="https://res.cloudinary.com/didqb05ko/image/upload/f_auto,q_auto,w_600/Nexus%20tech%20DS/nexus%20tech%20logo" alt="Nexus Tech Digital Solutions">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="section">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Our Services</h2>
+                <p class="section__subtitle">Comprehensive digital solutions to help your business grow</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    </div>
+                    <h3 class="service-card__title">Web Development</h3>
+                    <p class="service-card__desc">Custom websites and web applications built with modern technologies for optimal performance and user experience.</p>
+                    <a href="services.html" class="service-card__link">Learn More →</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                    </div>
+                    <h3 class="service-card__title">Mobile Apps</h3>
+                    <p class="service-card__desc">Native and cross-platform mobile applications for iOS and Android that engage users and drive business growth.</p>
+                    <a href="services.html" class="service-card__link">Learn More →</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="service-card__title">Game Development</h3>
+                    <p class="service-card__desc">Engaging 2D and 3D games using Unity and Unreal Engine, from concept to launch across multiple platforms.</p>
+                    <a href="services.html" class="service-card__link">Learn More →</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                    </div>
+                    <h3 class="service-card__title">Technical Support</h3>
+                    <p class="service-card__desc">Ongoing maintenance, updates, and technical assistance to keep your digital products running smoothly.</p>
+                    <a href="services.html" class="service-card__link">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview -->
+    <section class="section section--alt">
+        <div class="container">
+            <div class="about-preview">
+                <div class="about-preview__image">
+                    <img src="https://res.cloudinary.com/didqb05ko/image/upload/f_auto,q_auto,w_500/Nexus%20tech%20DS/photo%20of%20MeishaVernell" alt="Meisha Vernell - Founder">
+                </div>
+                <div class="about-preview__content">
+                    <h2 class="section__title">Meet the Founder</h2>
+                    <p>Hi, I'm Meisha Vernell, founder of Nexus Tech Digital Solutions. With over 10 years of experience in technology and a passion for helping businesses succeed online, I started this company to provide professional, affordable digital solutions.</p>
+                    <p>We believe every business deserves a powerful digital presence. Our mission is to deliver high-quality development services that drive real results for our clients.</p>
+                    <a href="about.html" class="btn btn--primary">Learn More About Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Preview -->
+    <section class="section">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Featured Projects</h2>
+                <p class="section__subtitle">A selection of our recent work</p>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="portfolio-card__image">
+                        <img src="https://res.cloudinary.com/didqb05ko/image/upload/f_auto,q_auto,w_400/Nexus%20tech%20DS/marc%20logo" alt="MARC">
+                    </div>
+                    <div class="portfolio-card__content">
+                        <h3 class="portfolio-card__title">MARC</h3>
+                        <p class="portfolio-card__desc">AI-powered marketing assistant for automated content creation and social media management.</p>
+                        <span class="portfolio-card__tag">Mobile App</span>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card">
+                    <div class="portfolio-card__image">
+                        <img src="https://res.cloudinary.com/didqb05ko/image/upload/f_auto,q_auto,w_400/Nexus%20tech%20DS/tech%20deck%20logo" alt="Tech Deck">
+                    </div>
+                    <div class="portfolio-card__content">
+                        <h3 class="portfolio-card__title">Tech Deck</h3>
+                        <p class="portfolio-card__desc">Interactive flashcard study platform with AI tutoring capabilities.</p>
+                        <span class="portfolio-card__tag">Web App</span>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card">
+                    <div class="portfolio-card__image">
+                        <img src="https://res.cloudinary.com/didqb05ko/image/upload/f_auto,q_auto,w_400/Nexus%20tech%20DS/nexora%20game%20logo" alt="Nexora">
+                    </div>
+                    <div class="portfolio-card__content">
+                        <h3 class="portfolio-card__title">Nexora</h3>
+                        <p class="portfolio-card__desc">Immersive action-adventure game built with Unreal Engine 5.</p>
+                        <span class="portfolio-card__tag">Game</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="portfolio.html" class="btn btn--outline btn--lg">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta__content">
+                <h2 class="cta__title">Ready to Start Your Project?</h2>
+                <p class="cta__subtitle">Let's discuss how we can help bring your digital vision to life.</p>
+                <div class="cta__actions">
+                    <a href="contact.html" class="btn btn--white btn--lg">Get a Free Quote</a>
+                    <a href="tel:+12027094556" class="btn btn--outline-white btn--lg">Call (202) 709-4556</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        <span class="footer__logo-icon">N</span>
+                        Nexus Tech
+                    </a>
+                    <p class="footer__desc">Professional digital solutions for businesses ready to grow. Web development, mobile apps, games, and more.</p>
+                </div>
+                
+                <div class="footer__links">
+                    <h4 class="footer__title">Quick Links</h4>
+                    <ul>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__links">
+                    <h4 class="footer__title">Services</h4>
+                    <ul>
+                        <li><a href="services.html">Web Development</a></li>
+                        <li><a href="services.html">Mobile Apps</a></li>
+                        <li><a href="services.html">Game Development</a></li>
+                        <li><a href="services.html">Technical Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__links">
+                    <h4 class="footer__title">Contact</h4>
+                    <ul>
+                        <li><a href="mailto:info@nexustechdigitalsolutions.net">info@nexustechdigitalsolutions.net</a></li>
+                        <li><a href="tel:+12027094556">(202) 709-4556</a></li>
+                        <li>Norfolk, Virginia</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2024 Nexus Tech Digital Solutions. All rights reserved.</p>
+                <div class="footer__legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
