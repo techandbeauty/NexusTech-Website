@@ -122,17 +122,27 @@ function initFirebase() {
     // AUTH STATE OBSERVER
     // ============================================
     
-    auth.onAuthStateChanged((user) => {
+    auth.onAuthStateChanged(async (user) => {
         if (user) {
             // User is signed in
             console.log('User signed in:', user.email);
             
-            // If on login page, redirect to portal
+            // If on login page, check role and redirect to appropriate dashboard
             if (window.location.pathname.includes('login.html')) {
-                window.location.href = 'portal.html';
+                try {
+                    const userDoc = await db.collection('users').doc(user.uid).get();
+                    if (userDoc.exists && userDoc.data().role === 'admin') {
+                        window.location.href = 'admin/dashboard.html';
+                    } else {
+                        window.location.href = 'client/dashboard.html';
+                    }
+                } catch (error) {
+                    // Default to client dashboard if can't check role
+                    window.location.href = 'client/dashboard.html';
+                }
             }
             
-            // Update portal UI if on portal page
+            // Update portal UI if on portal page (legacy support)
             if (window.location.pathname.includes('portal.html')) {
                 updatePortalUI(user);
             }
