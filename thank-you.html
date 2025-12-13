@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for your payment. Here's what happens next with your Nexus Tech project.">
+    <title>Thank You | Nexus Tech Digital Solutions</title>
+    
+    <!-- Prevent indexing of thank you page -->
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232563EB' rx='20' width='100' height='100'/><text x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>N</text></svg>">
+    
+    <style>
+        .thank-you {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .thank-you__nav {
+            background: white;
+            padding: 1rem 0;
+            border-bottom: 1px solid #E2E8F0;
+        }
+        
+        .thank-you__nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .thank-you__content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 1.5rem;
+            background: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 100%);
+        }
+        
+        .thank-you__card {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+        
+        .thank-you__icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #10B981, #059669);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            animation: scaleIn 0.5s ease-out;
+        }
+        
+        @keyframes scaleIn {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .thank-you__icon svg {
+            width: 40px;
+            height: 40px;
+            color: white;
+        }
+        
+        .thank-you__title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2rem;
+            color: #0F172A;
+            margin-bottom: 0.75rem;
+        }
+        
+        .thank-you__subtitle {
+            color: #64748B;
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+        }
+        
+        .thank-you__steps {
+            text-align: left;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: #F8FAFC;
+            border-radius: 12px;
+        }
+        
+        .thank-you__steps h3 {
+            font-size: 1rem;
+            color: #0F172A;
+            margin-bottom: 1rem;
+        }
+        
+        .thank-you__step {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #E2E8F0;
+        }
+        
+        .thank-you__step:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .thank-you__step-number {
+            width: 28px;
+            height: 28px;
+            background: #2563EB;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.875rem;
+            flex-shrink: 0;
+        }
+        
+        .thank-you__step-content h4 {
+            font-size: 0.9375rem;
+            color: #0F172A;
+            margin-bottom: 0.25rem;
+        }
+        
+        .thank-you__step-content p {
+            font-size: 0.875rem;
+            color: #64748B;
+            margin: 0;
+        }
+        
+        .thank-you__step-content a {
+            color: #2563EB;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .thank-you__step-content a:hover {
+            text-decoration: underline;
+        }
+        
+        .thank-you__contact {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #E2E8F0;
+        }
+        
+        .thank-you__contact h3 {
+            font-size: 0.9375rem;
+            color: #0F172A;
+            margin-bottom: 0.75rem;
+        }
+        
+        .thank-you__contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: #64748B;
+        }
+        
+        .thank-you__contact-info a {
+            color: #2563EB;
+            text-decoration: none;
+        }
+        
+        .thank-you__contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        .thank-you__footer {
+            background: #0F172A;
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+        
+        .thank-you__footer p {
+            opacity: 0.8;
+            font-size: 0.875rem;
+        }
+        
+        @media (max-width: 640px) {
+            .thank-you__card {
+                padding: 2rem 1.5rem;
+            }
+            
+            .thank-you__title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you">
+        <!-- Navigation -->
+        <nav class="thank-you__nav">
+            <div class="container">
+                <div class="thank-you__nav-inner">
+                    <a href="index.html" class="nav__logo">
+                        <span class="nav__logo-icon">N</span>
+                        Nexus Tech
+                    </a>
+                    <a href="login.html" class="btn btn--primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Client Login</a>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Main Content -->
+        <div class="thank-you__content">
+            <div class="thank-you__card">
+                <div class="thank-you__icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                </div>
+                
+                <h1 class="thank-you__title">Payment Received!</h1>
+                <p class="thank-you__subtitle">Thank you for your payment. We're excited to get started on your project.</p>
+                
+                <div class="thank-you__steps">
+                    <h3>What Happens Next</h3>
+                    
+                    <div class="thank-you__step">
+                        <div class="thank-you__step-number">1</div>
+                        <div class="thank-you__step-content">
+                            <h4>Confirmation Email</h4>
+                            <p>You'll receive a payment confirmation and receipt within a few minutes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="thank-you__step">
+                        <div class="thank-you__step-number">2</div>
+                        <div class="thank-you__step-content">
+                            <h4>Pre-Consultation Questionnaire</h4>
+                            <p>Please fill out our <a href="https://forms.gle/TrCiaGdg6dqmCvA48" target="_blank" rel="noopener">project questionnaire</a> to help us prepare for your kickoff call.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="thank-you__step">
+                        <div class="thank-you__step-number">3</div>
+                        <div class="thank-you__step-content">
+                            <h4>Project Kickoff</h4>
+                            <p>We'll reach out within 24 hours to schedule your project kickoff call and get started.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="index.html" class="btn btn--primary">Back to Home</a>
+                
+                <div class="thank-you__contact">
+                    <h3>Questions?</h3>
+                    <div class="thank-you__contact-info">
+                        <span>📧 <a href="mailto:info@nexustechdigitalsolutions.net">info@nexustechdigitalsolutions.net</a></span>
+                        <span>📞 <a href="tel:+12027094556">(202) 709-4556</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="thank-you__footer">
+            <div class="container">
+                <p>&copy; 2024 Nexus Tech Digital Solutions. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
