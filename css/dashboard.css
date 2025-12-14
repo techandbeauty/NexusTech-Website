@@ -4,15 +4,15 @@
    ============================================ */
 
 :root {
-    --primary: #0F172A;
-    --accent: #2563EB;
-    --accent-dark: #1D4ED8;
-    --accent-light: #DBEAFE;
-    --success: #10B981;
+    --primary: #1A365D;
+    --accent: #2B5A9E;
+    --accent-dark: #1A365D;
+    --accent-light: rgba(26, 54, 93, 0.1);
+    --success: #059669;
     --success-light: #D1FAE5;
-    --warning: #F59E0B;
+    --warning: #D97706;
     --warning-light: #FEF3C7;
-    --error: #EF4444;
+    --error: #DC2626;
     --error-light: #FEE2E2;
     --gray-50: #F8FAFC;
     --gray-100: #F1F5F9;
@@ -27,11 +27,11 @@
     --white: #FFFFFF;
     --sidebar-width: 260px;
     --header-height: 64px;
-    --radius: 8px;
-    --radius-lg: 12px;
-    --shadow: 0 1px 3px rgba(0,0,0,0.1);
-    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+    --radius: 6px;
+    --radius-lg: 8px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+    --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -78,11 +78,13 @@ body {
 .sidebar__logo {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--white);
     text-decoration: none;
+}
+
+.sidebar__logo-img {
+    height: 40px;
+    width: auto;
+    filter: brightness(0) invert(1);
 }
 
 .sidebar__logo-icon {
@@ -94,6 +96,7 @@ body {
     align-items: center;
     justify-content: center;
     font-weight: 700;
+    color: white;
 }
 
 .sidebar__nav {
