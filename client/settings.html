@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | Client Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232563EB' rx='20' width='100' height='100'/><text x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>N</text></svg>">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar__header">
+                <a href="../index.html" class="sidebar__logo">
+                    <span class="sidebar__logo-icon">N</span>
+                    Nexus Tech
+                </a>
+            </div>
+            <nav class="sidebar__nav">
+                <div class="sidebar__section">Menu</div>
+                <a href="dashboard.html" class="sidebar__link">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                    Dashboard
+                </a>
+                <a href="projects.html" class="sidebar__link">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                    My Projects
+                </a>
+                <a href="messages.html" class="sidebar__link">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                    Messages
+                </a>
+                <a href="files.html" class="sidebar__link">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>
+                    Files
+                </a>
+                <div class="sidebar__section">Resources</div>
+                <a href="resources.html" class="sidebar__link">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                    How-To Guides
+                </a>
+                <div class="sidebar__section">Billing</div>
+                <a href="payments.html" class="sidebar__link">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+                    Payments
+                </a>
+                <a href="book.html" class="sidebar__link">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    Book Service
+                </a>
+                <div class="sidebar__section">Account</div>
+                <a href="settings.html" class="sidebar__link sidebar__link--active">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    Settings
+                </a>
+            </nav>
+            <div class="sidebar__footer">
+                <div class="sidebar__user">
+                    <div class="sidebar__avatar" id="userAvatar">?</div>
+                    <div class="sidebar__user-info">
+                        <div class="sidebar__user-name" id="userName">Loading...</div>
+                        <div class="sidebar__user-role">Client</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <div class="header__left">
+                    <button class="header__toggle" id="sidebarToggle">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                    <h1 class="header__title">Account Settings</h1>
+                </div>
+                <div class="header__right">
+                    <button class="header__btn" onclick="handleLogout()" title="Logout">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
+                    </button>
+                </div>
+            </header>
+
+            <div class="content">
+                <!-- Profile Section -->
+                <div class="card mb-3">
+                    <div class="card__header">
+                        <h2 class="card__title">Profile Information</h2>
+                    </div>
+                    <form id="profileForm" onsubmit="updateProfile(event)">
+                        <div class="card__body">
+                            <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem;">
+                                <div style="width: 80px; height: 80px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 600; color: white;" id="profileAvatar">?</div>
+                                <div>
+                                    <h3 style="margin-bottom: 0.25rem; color: var(--primary);" id="profileName">Loading...</h3>
+                                    <p style="color: var(--gray-500); margin: 0;" id="profileEmail">loading@email.com</p>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Display Name</label>
+                                    <input type="text" class="form-input" id="displayName" placeholder="Your name">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-input" id="phone" placeholder="(555) 123-4567">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Company Name</label>
+                                <input type="text" class="form-input" id="company" placeholder="Your company (optional)">
+                            </div>
+                        </div>
+                        <div class="card__footer">
+                            <button type="submit" class="btn btn--primary">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                Save Changes
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Password Section -->
+                <div class="card mb-3">
+                    <div class="card__header">
+                        <h2 class="card__title">Password & Security</h2>
+                    </div>
+                    <div class="card__body">
+                        <p style="color: var(--gray-600); margin-bottom: 1.5rem;">
+                            To change your password, we'll send a password reset link to your email address.
+                        </p>
+                        
+                        <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+                            <button class="btn btn--primary" onclick="sendPasswordReset()">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
+                                Reset Password
+                            </button>
+                            <span style="color: var(--gray-500); font-size: 0.875rem;" id="resetStatus"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notification Preferences -->
+                <div class="card mb-3">
+                    <div class="card__header">
+                        <h2 class="card__title">Notification Preferences</h2>
+                    </div>
+                    <div class="card__body">
+                        <div style="display: flex; flex-direction: column; gap: 1rem;">
+                            <label style="display: flex; align-items: center; gap: 0.75rem; cursor: pointer;">
+                                <input type="checkbox" id="notifyEmail" checked style="width: 18px; height: 18px;">
+                                <div>
+                                    <strong style="color: var(--primary);">Email Notifications</strong>
+                                    <p style="color: var(--gray-500); font-size: 0.875rem; margin: 0;">Receive updates about your projects via email</p>
+                                </div>
+                            </label>
+                            
+                            <label style="display: flex; align-items: center; gap: 0.75rem; cursor: pointer;">
+                                <input type="checkbox" id="notifyMessages" checked style="width: 18px; height: 18px;">
+                                <div>
+                                    <strong style="color: var(--primary);">Message Alerts</strong>
+                                    <p style="color: var(--gray-500); font-size: 0.875rem; margin: 0;">Get notified when you receive new messages</p>
+                                </div>
+                            </label>
+                            
+                            <label style="display: flex; align-items: center; gap: 0.75rem; cursor: pointer;">
+                                <input type="checkbox" id="notifyPayments" checked style="width: 18px; height: 18px;">
+                                <div>
+                                    <strong style="color: var(--primary);">Payment Reminders</strong>
+                                    <p style="color: var(--gray-500); font-size: 0.875rem; margin: 0;">Receive reminders about upcoming payments</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="card__footer">
+                        <button class="btn btn--primary" onclick="saveNotificationPrefs()">
+                            Save Preferences
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Danger Zone -->
+                <div class="card" style="border: 1px solid var(--error-light);">
+                    <div class="card__header">
+                        <h2 class="card__title" style="color: var(--error);">Danger Zone</h2>
+                    </div>
+                    <div class="card__body">
+                        <p style="color: var(--gray-600); margin-bottom: 1rem;">
+                            Need to delete your account? Contact us and we'll help you with the process.
+                        </p>
+                        <a href="mailto:info@nexustechdigitalsolutions.net?subject=Account%20Deletion%20Request" class="btn btn--outline" style="border-color: var(--error); color: var(--error);">
+                            Contact Support
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="modal-overlay" style="display: none;">
+        <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center;">
+            <div class="spinner" style="margin: 0 auto 1rem;"></div>
+            <p id="loadingText">Saving...</p>
+        </div>
+    </div>
+
+    <script type="module">
+        import { 
+            auth, db, onAuthStateChanged, signOut, sendPasswordResetEmail, updateProfile as firebaseUpdateProfile,
+            doc, getDoc, setDoc, serverTimestamp
+        } from '../js/firebase-config.js';
+        
+        let currentUser = null;
+        
+        // Check authentication
+        onAuthStateChanged(auth, async (user) => {
+            if (!user) {
+                window.location.href = '../login.html';
+                return;
+            }
+            
+            currentUser = user;
+            
+            // Update UI
+            document.getElementById('userName').textContent = user.displayName || user.email;
+            document.getElementById('userAvatar').textContent = (user.displayName || user.email).charAt(0).toUpperCase();
+            document.getElementById('profileAvatar').textContent = (user.displayName || user.email).charAt(0).toUpperCase();
+            document.getElementById('profileName').textContent = user.displayName || 'No name set';
+            document.getElementById('profileEmail').textContent = user.email;
+            document.getElementById('displayName').value = user.displayName || '';
+            
+            // Load additional profile data from Firestore
+            try {
+                const userDoc = await getDoc(doc(db, 'users', user.uid));
+                if (userDoc.exists()) {
+                    const data = userDoc.data();
+                    document.getElementById('phone').value = data.phone || '';
+                    document.getElementById('company').value = data.company || '';
+                    document.getElementById('notifyEmail').checked = data.notifyEmail !== false;
+                    document.getElementById('notifyMessages').checked = data.notifyMessages !== false;
+                    document.getElementById('notifyPayments').checked = data.notifyPayments !== false;
+                }
+            } catch (error) {
+                console.error('Error loading profile:', error);
+            }
+        });
+        
+        window.updateProfile = async function(e) {
+            e.preventDefault();
+            
+            const displayName = document.getElementById('displayName').value;
+            const phone = document.getElementById('phone').value;
+            const company = document.getElementById('company').value;
+            
+            document.getElementById('loadingOverlay').style.display = 'flex';
+            
+            try {
+                // Update Firebase Auth profile
+                await firebaseUpdateProfile(currentUser, { displayName });
+                
+                // Update Firestore
+                await setDoc(doc(db, 'users', currentUser.uid), {
+                    displayName,
+                    phone,
+                    company,
+                    updatedAt: serverTimestamp()
+                }, { merge: true });
+                
+                // Update UI
+                document.getElementById('userName').textContent = displayName || currentUser.email;
+                document.getElementById('userAvatar').textContent = (displayName || currentUser.email).charAt(0).toUpperCase();
+                document.getElementById('profileAvatar').textContent = (displayName || currentUser.email).charAt(0).toUpperCase();
+                document.getElementById('profileName').textContent = displayName || 'No name set';
+                
+                alert('Profile updated successfully!');
+                
+            } catch (error) {
+                console.error('Error updating profile:', error);
+                alert('Error updating profile. Please try again.');
+            } finally {
+                document.getElementById('loadingOverlay').style.display = 'none';
+            }
+        };
+        
+        window.sendPasswordReset = async function() {
+            const statusEl = document.getElementById('resetStatus');
+            
+            try {
+                await sendPasswordResetEmail(auth, currentUser.email);
+                statusEl.textContent = '✓ Reset link sent to ' + currentUser.email;
+                statusEl.style.color = 'var(--success)';
+            } catch (error) {
+                console.error('Error sending reset email:', error);
+                statusEl.textContent = 'Error sending reset email. Please try again.';
+                statusEl.style.color = 'var(--error)';
+            }
+        };
+        
+        window.saveNotificationPrefs = async function() {
+            document.getElementById('loadingOverlay').style.display = 'flex';
+            
+            try {
+                await setDoc(doc(db, 'users', currentUser.uid), {
+                    notifyEmail: document.getElementById('notifyEmail').checked,
+                    notifyMessages: document.getElementById('notifyMessages').checked,
+                    notifyPayments: document.getElementById('notifyPayments').checked,
+                    updatedAt: serverTimestamp()
+                }, { merge: true });
+                
+                alert('Preferences saved!');
+                
+            } catch (error) {
+                console.error('Error saving preferences:', error);
+                alert('Error saving preferences. Please try again.');
+            } finally {
+                document.getElementById('loadingOverlay').style.display = 'none';
+            }
+        };
+        
+        // Sidebar toggle
+        document.getElementById('sidebarToggle').addEventListener('click', () => {
+            document.getElementById('sidebar').classList.toggle('active');
+        });
+        
+        // Logout
+        window.handleLogout = async function() {
+            await signOut(auth);
+            window.location.href = '../login.html';
+        };
+    </script>
+</body>
+</html>

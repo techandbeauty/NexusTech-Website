@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages | Client Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232563EB' rx='20' width='100' height='100'/><text x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>N</text></svg>">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar__header"><a href="../index.html" class="sidebar__logo"><span class="sidebar__logo-icon">N</span>Nexus Tech</a></div>
+            <nav class="sidebar__nav">
+                <div class="sidebar__section">Menu</div>
+                <a href="dashboard.html" class="sidebar__link"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>Dashboard</a>
+                <a href="projects.html" class="sidebar__link"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>My Projects</a>
+                <a href="messages.html" class="sidebar__link sidebar__link--active"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>Messages</a>
+                <a href="files.html" class="sidebar__link"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>Files</a>
+                <div class="sidebar__section">Resources</div>
+                <a href="resources.html" class="sidebar__link"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>How-To Guides</a>
+                <div class="sidebar__section">Billing</div>
+                <a href="payments.html" class="sidebar__link"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>Payments</a>
+                <a href="book.html" class="sidebar__link"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>Book Service</a>
+                <div class="sidebar__section">Account</div>
+                <a href="settings.html" class="sidebar__link"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Settings</a>
+            </nav>
+            <div class="sidebar__footer"><div class="sidebar__user"><div class="sidebar__avatar" id="userAvatar">?</div><div class="sidebar__user-info"><div class="sidebar__user-name" id="userName">Loading...</div><div class="sidebar__user-role">Client</div></div></div></div>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <div class="header__left">
+                    <button class="header__toggle" id="sidebarToggle"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+                    <h1 class="header__title">Messages</h1>
+                </div>
+                <div class="header__right">
+                    <button class="header__btn" onclick="handleLogout()" title="Logout"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg></button>
+                </div>
+            </header>
+
+            <div class="content">
+                <div class="card" style="height: calc(100vh - 180px); display: flex; flex-direction: column;">
+                    <div class="card__header">
+                        <h2 class="card__title">Chat with Nexus Tech</h2>
+                        <span style="color: var(--success); font-size: 0.875rem;">● Online</span>
+                    </div>
+                    
+                    <!-- Messages Area -->
+                    <div class="card__body" style="flex: 1; overflow-y: auto; padding: 1rem;" id="messagesArea">
+                        <div class="loading"><div class="spinner"></div></div>
+                    </div>
+                    
+                    <!-- Message Input -->
+                    <div class="card__footer" style="padding: 1rem;">
+                        <form id="messageForm" onsubmit="sendMessage(event)" style="display: flex; gap: 0.75rem;">
+                            <input type="text" class="form-input" id="messageInput" placeholder="Type your message..." style="flex: 1;" required>
+                            <button type="submit" class="btn btn--primary">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                                Send
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module">
+        import { 
+            auth, db, onAuthStateChanged, signOut,
+            collection, doc, getDocs, addDoc, query, where, orderBy, onSnapshot, serverTimestamp
+        } from '../js/firebase-config.js';
+        
+        let currentUser = null;
+        let conversationId = null;
+        let unsubscribe = null;
+        
+        onAuthStateChanged(auth, async (user) => {
+            if (!user) { window.location.href = '../login.html'; return; }
+            currentUser = user;
+            document.getElementById('userName').textContent = user.displayName || user.email;
+            document.getElementById('userAvatar').textContent = (user.displayName || user.email).charAt(0).toUpperCase();
+            initChat();
+        });
+        
+        async function initChat() {
+            // Get or create conversation
+            try {
+                const q = query(collection(db, 'conversations'), where('clientId', '==', currentUser.uid));
+                const snapshot = await getDocs(q);
+                
+                if (snapshot.empty) {
+                    // Create new conversation
+                    const docRef = await addDoc(collection(db, 'conversations'), {
+                        clientId: currentUser.uid,
+                        clientName: currentUser.displayName || currentUser.email,
+                        lastMessage: '',
+                        lastMessageAt: serverTimestamp(),
+                        createdAt: serverTimestamp()
+                    });
+                    conversationId = docRef.id;
+                } else {
+                    conversationId = snapshot.docs[0].id;
+                }
+                
+                // Listen for messages
+                const messagesQuery = query(
+                    collection(db, 'messages'),
+                    where('conversationId', '==', conversationId),
+                    orderBy('createdAt', 'asc')
+                );
+                
+                unsubscribe = onSnapshot(messagesQuery, (snapshot) => {
+                    const messages = snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
+                    renderMessages(messages);
+                });
+                
+            } catch (error) {
+                console.error('Error initializing chat:', error);
+                document.getElementById('messagesArea').innerHTML = `
+                    <div class="empty-state">
+                        <p>Error loading messages. Please refresh the page.</p>
+                    </div>
+                `;
+            }
+        }
+        
+        function renderMessages(messages) {
+            const area = document.getElementById('messagesArea');
+            
+            if (messages.length === 0) {
+                area.innerHTML = `
+                    <div style="text-align: center; padding: 3rem; color: var(--gray-500);">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 48px; height: 48px; margin-bottom: 1rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                        <p>No messages yet. Start a conversation!</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            area.innerHTML = messages.map(m => {
+                const isMine = m.senderId === currentUser.uid;
+                const time = m.createdAt?.toDate ? m.createdAt.toDate().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : '';
+                return `
+                    <div class="message ${isMine ? 'message--sent' : ''}">
+                        <div class="message__avatar" style="background: ${isMine ? 'var(--accent)' : 'var(--gray-200)'}; color: ${isMine ? 'white' : 'var(--gray-600)'};">
+                            ${isMine ? (currentUser.displayName || currentUser.email).charAt(0).toUpperCase() : 'N'}
+                        </div>
+                        <div class="message__content">
+                            <div class="message__text">${m.text}</div>
+                            <div class="message__time">${time}</div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            // Scroll to bottom
+            area.scrollTop = area.scrollHeight;
+        }
+        
+        window.sendMessage = async function(e) {
+            e.preventDefault();
+            const input = document.getElementById('messageInput');
+            const text = input.value.trim();
+            if (!text || !conversationId) return;
+            
+            input.value = '';
+            
+            try {
+                await addDoc(collection(db, 'messages'), {
+                    conversationId,
+                    senderId: currentUser.uid,
+                    senderName: currentUser.displayName || currentUser.email,
+                    text,
+                    createdAt: serverTimestamp()
+                });
+            } catch (error) {
+                console.error('Error sending message:', error);
+                alert('Error sending message. Please try again.');
+            }
+        };
+        
+        document.getElementById('sidebarToggle').addEventListener('click', () => {
+            document.getElementById('sidebar').classList.toggle('active');
+        });
+        
+        window.handleLogout = async function() {
+            if (unsubscribe) unsubscribe();
+            await signOut(auth);
+            window.location.href = '../login.html';
+        };
+    </script>
+</body>
+</html>

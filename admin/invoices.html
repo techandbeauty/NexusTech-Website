@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoices | Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232563EB' rx='20' width='100' height='100'/><text x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>N</text></svg>">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar__header"><a href="../index.html" class="sidebar__logo"><span class="sidebar__logo-icon">N</span>Nexus Tech</a></div>
+            <nav class="sidebar__nav">
+                <div class="sidebar__section">Main</div>
+                <a href="dashboard.html" class="sidebar__link"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>Dashboard</a>
+                <a href="clients.html" class="sidebar__link"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>Clients</a>
+                <a href="projects.html" class="sidebar__link"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>Projects</a>
+                <a href="messages.html" class="sidebar__link"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>Messages</a>
+                <div class="sidebar__section">Content</div>
+                <a href="files.html" class="sidebar__link"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>Files</a>
+                <a href="resources.html" class="sidebar__link"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>Resources</a>
+                <a href="images.html" class="sidebar__link"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>Website Images</a>
+                <div class="sidebar__section">Finance</div>
+                <a href="invoices.html" class="sidebar__link sidebar__link--active"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>Invoices</a>
+                <a href="bookings.html" class="sidebar__link"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>Bookings</a>
+            </nav>
+            <div class="sidebar__footer"><div class="sidebar__user"><div class="sidebar__avatar" id="userAvatar">M</div><div class="sidebar__user-info"><div class="sidebar__user-name" id="userName">Admin</div><div class="sidebar__user-role">Administrator</div></div></div></div>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <div class="header__left">
+                    <button class="header__toggle" id="sidebarToggle"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+                    <h1 class="header__title">Invoices</h1>
+                </div>
+                <div class="header__right">
+                    <button class="btn btn--primary" onclick="openAddModal()">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+                        Create Invoice
+                    </button>
+                </div>
+            </header>
+
+            <div class="content">
+                <!-- Summary Stats -->
+                <div class="stats-grid mb-3">
+                    <div class="stat-card">
+                        <div class="stat-card__icon stat-card__icon--green"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+                        <div class="stat-card__value" id="paidTotal">$0</div>
+                        <div class="stat-card__label">Paid</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__icon stat-card__icon--yellow"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+                        <div class="stat-card__value" id="pendingTotal">$0</div>
+                        <div class="stat-card__label">Pending</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__icon stat-card__icon--red"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+                        <div class="stat-card__value" id="overdueTotal">$0</div>
+                        <div class="stat-card__label">Overdue</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="table-container">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Invoice #</th>
+                                    <th>Client</th>
+                                    <th>Description</th>
+                                    <th>Amount</th>
+                                    <th>Due Date</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="invoicesTable">
+                                <tr><td colspan="7"><div class="loading"><div class="spinner"></div></div></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Create Invoice Modal -->
+    <div class="modal-overlay" id="invoiceModal">
+        <div class="modal" style="max-width: 600px;">
+            <div class="modal__header">
+                <h3 class="modal__title">Create Invoice</h3>
+                <button class="modal__close" onclick="closeModal()"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
+            </div>
+            <form id="invoiceForm" onsubmit="saveInvoice(event)">
+                <div class="modal__body">
+                    <div class="form-group">
+                        <label class="form-label">Client *</label>
+                        <select class="form-select" id="invoiceClient" required>
+                            <option value="">Select a client...</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Invoice Number</label>
+                            <input type="text" class="form-input" id="invoiceNumber" placeholder="INV-001">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Due Date *</label>
+                            <input type="date" class="form-input" id="invoiceDueDate" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Description *</label>
+                        <input type="text" class="form-input" id="invoiceDescription" required placeholder="e.g., Website Development - Phase 1">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Amount ($) *</label>
+                        <input type="number" class="form-input" id="invoiceAmount" required min="0" step="0.01" placeholder="0.00">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Notes</label>
+                        <textarea class="form-textarea" id="invoiceNotes" rows="2" placeholder="Additional notes for the client..."></textarea>
+                    </div>
+                </div>
+                <div class="modal__footer">
+                    <button type="button" class="btn btn--secondary" onclick="closeModal()">Cancel</button>
+                    <button type="submit" class="btn btn--primary">Create Invoice</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module">
+        import { 
+            auth, db, onAuthStateChanged, signOut, isAdmin,
+            collection, doc, getDocs, addDoc, updateDoc, deleteDoc, query, where, orderBy, serverTimestamp
+        } from '../js/firebase-config.js';
+        
+        let invoices = [];
+        let clients = [];
+        
+        onAuthStateChanged(auth, async (user) => {
+            if (!user) { window.location.href = '../login.html'; return; }
+            const admin = await isAdmin(user.uid);
+            if (!admin) { window.location.href = '../client/dashboard.html'; return; }
+            document.getElementById('userName').textContent = user.displayName || user.email;
+            document.getElementById('userAvatar').textContent = (user.displayName || user.email).charAt(0).toUpperCase();
+            loadData();
+        });
+        
+        async function loadData() {
+            // Load clients for dropdown
+            try {
+                const clientsQ = query(collection(db, 'users'), where('role', '==', 'client'));
+                const clientsSnap = await getDocs(clientsQ);
+                clients = clientsSnap.docs.map(d => ({ id: d.id, ...d.data() }));
+                
+                const select = document.getElementById('invoiceClient');
+                clients.forEach(c => {
+                    select.innerHTML += `<option value="${c.id}" data-name="${c.displayName || c.email}">${c.displayName || c.email}</option>`;
+                });
+            } catch (e) { console.error('Error loading clients:', e); }
+            
+            // Load invoices
+            try {
+                const q = query(collection(db, 'invoices'), orderBy('createdAt', 'desc'));
+                const snapshot = await getDocs(q);
+                invoices = snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
+                renderInvoices();
+                updateStats();
+            } catch (error) {
+                console.error('Error loading invoices:', error);
+                document.getElementById('invoicesTable').innerHTML = `<tr><td colspan="7" style="text-align:center;padding:2rem;color:var(--gray-500);">No invoices yet</td></tr>`;
+            }
+        }
+        
+        function updateStats() {
+            const paid = invoices.filter(i => i.status === 'paid').reduce((sum, i) => sum + (i.amount || 0), 0);
+            const pending = invoices.filter(i => i.status === 'pending').reduce((sum, i) => sum + (i.amount || 0), 0);
+            const overdue = invoices.filter(i => i.status === 'overdue').reduce((sum, i) => sum + (i.amount || 0), 0);
+            document.getElementById('paidTotal').textContent = '$' + paid.toLocaleString();
+            document.getElementById('pendingTotal').textContent = '$' + pending.toLocaleString();
+            document.getElementById('overdueTotal').textContent = '$' + overdue.toLocaleString();
+        }
+        
+        function renderInvoices() {
+            const table = document.getElementById('invoicesTable');
+            if (invoices.length === 0) {
+                table.innerHTML = `<tr><td colspan="7" style="text-align:center;padding:2rem;color:var(--gray-500);">No invoices yet</td></tr>`;
+                return;
+            }
+            table.innerHTML = invoices.map(inv => {
+                const created = inv.createdAt?.toDate ? inv.createdAt.toDate().toLocaleDateString() : 'N/A';
+                const due = inv.dueDate || 'N/A';
+                return `
+                    <tr>
+                        <td><strong>#${inv.invoiceNumber || inv.id.slice(0,8).toUpperCase()}</strong></td>
+                        <td>${inv.clientName || 'Unknown'}</td>
+                        <td>${inv.description || '-'}</td>
+                        <td><strong>$${(inv.amount || 0).toFixed(2)}</strong></td>
+                        <td>${due}</td>
+                        <td><span class="badge badge--${inv.status}">${inv.status}</span></td>
+                        <td>
+                            <select class="form-select" style="width:auto;padding:0.25rem 0.5rem;font-size:0.8rem;" onchange="updateStatus('${inv.id}', this.value)">
+                                <option value="pending" ${inv.status === 'pending' ? 'selected' : ''}>Pending</option>
+                                <option value="paid" ${inv.status === 'paid' ? 'selected' : ''}>Paid</option>
+                                <option value="overdue" ${inv.status === 'overdue' ? 'selected' : ''}>Overdue</option>
+                                <option value="cancelled" ${inv.status === 'cancelled' ? 'selected' : ''}>Cancelled</option>
+                            </select>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+        
+        window.openAddModal = function() {
+            document.getElementById('invoiceForm').reset();
+            // Set default due date to 30 days from now
+            const dueDate = new Date();
+            dueDate.setDate(dueDate.getDate() + 30);
+            document.getElementById('invoiceDueDate').value = dueDate.toISOString().split('T')[0];
+            document.getElementById('invoiceModal').classList.add('active');
+        };
+        
+        window.closeModal = function() {
+            document.getElementById('invoiceModal').classList.remove('active');
+        };
+        
+        window.saveInvoice = async function(e) {
+            e.preventDefault();
+            const clientSelect = document.getElementById('invoiceClient');
+            const clientOption = clientSelect.options[clientSelect.selectedIndex];
+            
+            try {
+                await addDoc(collection(db, 'invoices'), {
+                    clientId: clientSelect.value,
+                    clientName: clientOption.dataset.name,
+                    invoiceNumber: document.getElementById('invoiceNumber').value || `INV-${Date.now().toString().slice(-6)}`,
+                    description: document.getElementById('invoiceDescription').value,
+                    amount: parseFloat(document.getElementById('invoiceAmount').value),
+                    dueDate: document.getElementById('invoiceDueDate').value,
+                    notes: document.getElementById('invoiceNotes').value,
+                    status: 'pending',
+                    createdAt: serverTimestamp()
+                });
+                closeModal();
+                loadData();
+            } catch (error) {
+                console.error('Error creating invoice:', error);
+                alert('Error creating invoice. Please try again.');
+            }
+        };
+        
+        window.updateStatus = async function(id, status) {
+            try {
+                await updateDoc(doc(db, 'invoices', id), { 
+                    status,
+                    ...(status === 'paid' ? { paidAt: serverTimestamp() } : {})
+                });
+                loadData();
+            } catch (error) {
+                console.error('Error updating status:', error);
+            }
+        };
+        
+        document.getElementById('sidebarToggle').addEventListener('click', () => {
+            document.getElementById('sidebar').classList.toggle('active');
+        });
+        
+        window.handleLogout = async function() { await signOut(auth); window.location.href = '../login.html'; };
+    </script>
+</body>
+</html>
