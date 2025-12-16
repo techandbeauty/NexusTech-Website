@@ -1,256 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Nexus Tech Digital Solutions for a free consultation. Get a quote for your web development, app development, or IT support project.">
-    <title>Contact Us | Nexus Tech Digital Solutions</title>
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231A365D' rx='8' width='100' height='100'/><text x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>N</text></svg>">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Nexus Tech Digital Solutions for software development, mobile apps, and business automation.">
+  <title>Contact Us | Nexus Tech Digital Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav" id="nav">
-        <div class="container">
-            <div class="nav__inner">
-                <a href="index.html" class="nav__logo"><img src="images/logo.png" alt="Nexus Tech Digital Solutions" class="nav__logo-img"></a>
-                <div class="nav__menu">
-                    <a href="index.html" class="nav__link">Home</a>
-                    <a href="about.html" class="nav__link">About</a>
-                    <a href="services.html" class="nav__link">Services</a>
-                    <a href="portfolio.html" class="nav__link">Portfolio</a>
-                    <a href="faq.html" class="nav__link">FAQ</a>
-                </div>
-                <a href="contact.html" class="btn btn--primary nav__cta">Get Started</a>
-                <button class="nav__toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-            </div>
-        </div>
-    </nav>
-    
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="index.html" class="mobile-menu__link">Home</a>
-        <a href="about.html" class="mobile-menu__link">About</a>
-        <a href="services.html" class="mobile-menu__link">Services</a>
-        <a href="portfolio.html" class="mobile-menu__link">Portfolio</a>
-        <a href="faq.html" class="mobile-menu__link">FAQ</a>
-        <a href="contact.html" class="mobile-menu__link">Contact</a>
-        <a href="login.html" class="mobile-menu__link">Client Portal</a>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">N</div>
+          <span>Nexus Tech</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+            <li><a href="faq.html" class="nav-link">FAQ</a></li>
+            <li><a href="contact.html" class="nav-link active">Contact</a></li>
+          </ul>
+          <a href="book.html" class="btn btn-primary">Book Consultation</a>
+        </nav>
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
+  </header>
 
-    <section class="page-header">
-        <div class="container">
-            <h1 class="page-header__title">Start Your Project</h1>
-            <p class="page-header__subtitle">Tell us about your project and we'll get back to you within 24 hours with a free consultation.</p>
+  <div class="mobile-menu">
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <a href="about.html" class="mobile-nav-link">About</a>
+    <a href="services.html" class="mobile-nav-link">Services</a>
+    <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
+    <a href="faq.html" class="mobile-nav-link">FAQ</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+    <a href="book.html" class="mobile-nav-link">Book Consultation</a>
+  </div>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Start Your Project</h1>
+      <p class="lead">Tell us about your project and we'll get back to you within 24 hours.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2" style="gap: 4rem; align-items: start;">
+        <!-- Contact Info Sidebar -->
+        <div>
+          <h2 style="margin-bottom: 1rem;">Let's Build Something Great</h2>
+          <p>Fill out the form and we'll review your project details. Expect a response within 24 hours with next steps or follow-up questions.</p>
+
+          <div class="contact-card">
+            <h4>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              Email
+            </h4>
+            <p><a href="mailto:info@nexustechdigitalsolutions.net">info@nexustechdigitalsolutions.net</a></p>
+          </div>
+
+          <div class="contact-card">
+            <h4>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              Phone
+            </h4>
+            <p><a href="tel:+12027094556">(202) 709-4556</a></p>
+          </div>
+
+          <div class="contact-card">
+            <h4>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              Location
+            </h4>
+            <p>Norfolk, Virginia, USA</p>
+          </div>
+
+          <div class="contact-card">
+            <h4>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              Business Hours
+            </h4>
+            <p>Monday - Friday<br>9:00 AM - 6:00 PM EST</p>
+          </div>
+
+          <div class="social-links" style="margin-top: 1.5rem;">
+            <a href="https://www.instagram.com/nexustechdigitalsolutions" target="_blank" class="social-link" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.facebook.com/share/1De6QUqb3s/?mibextid=wwXIfr" target="_blank" class="social-link" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+          </div>
+
+          <div class="info-box" style="margin-top: 2rem;">
+            <h4>🏛️ Government Contracting?</h4>
+            <p>For RFPs, teaming agreements, and federal inquiries, please use our dedicated government form.</p>
+            <a href="government.html" class="btn btn-white btn-sm" style="margin-top: 1rem;">Government Inquiries →</a>
+          </div>
         </div>
-    </section>
 
-    <section class="section">
-        <div class="container">
-            <div id="formSuccess" class="form-success" style="display: none;">
-                <div class="form-success__icon">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        <!-- Client Intake Form -->
+        <div class="form-container">
+          <form action="https://formsubmit.co/info@nexustechdigitalsolutions.net" method="POST">
+            <!-- FormSubmit Configuration -->
+            <input type="hidden" name="_subject" value="New Project Inquiry - Nexus Tech">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://nexustechdigitalsolutions.net/thank-you.html">
+            <input type="text" name="_honey" style="display:none">
+
+            <!-- Section 1: Contact Information -->
+            <div class="form-section">
+              <h3 class="form-section-title">Contact Information</h3>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Full Name <span class="required">*</span></label>
+                  <input type="text" name="name" class="form-input" placeholder="Your full name" required>
                 </div>
-                <h3>Thank You!</h3>
-                <p>Your project inquiry has been received. We'll contact you within 24 hours to schedule your free consultation.</p>
-                <a href="index.html" class="btn btn--primary" style="margin-top: 1.5rem;">Back to Home</a>
+                <div class="form-group">
+                  <label class="form-label">Email Address <span class="required">*</span></label>
+                  <input type="email" name="email" class="form-input" placeholder="you@example.com" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Phone Number <span class="required">*</span></label>
+                  <input type="tel" name="phone" class="form-input" placeholder="(555) 123-4567" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Company / Organization</label>
+                  <input type="text" name="company" class="form-input" placeholder="Your company name (optional)">
+                </div>
+              </div>
             </div>
-            
-            <div class="contact-grid" id="contactForm">
-                <div class="contact-form-wrapper">
-                    <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Project Inquiry Form</h2>
-                    <p style="color: var(--color-gray-500); margin-bottom: 2rem;">Fill out the form below and we'll reach out to discuss your project.</p>
-                    
-                    <form name="project-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="contact.html?success=true" class="contact-form">
-                        <p class="visually-hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
-                        <input type="hidden" name="form-name" value="project-inquiry">
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="firstName" class="form-label">First Name *</label>
-                                <input type="text" id="firstName" name="firstName" class="form-input" required placeholder="John">
-                            </div>
-                            <div class="form-group">
-                                <label for="lastName" class="form-label">Last Name *</label>
-                                <input type="text" id="lastName" name="lastName" class="form-input" required placeholder="Smith">
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email Address *</label>
-                            <input type="email" id="email" name="email" class="form-input" required placeholder="john@yourcompany.com">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone" class="form-label">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" class="form-input" required placeholder="(555) 123-4567">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="company" class="form-label">Business/Company Name</label>
-                            <input type="text" id="company" name="company" class="form-input" placeholder="Your Company LLC">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="website" class="form-label">Current Website (if any)</label>
-                            <input type="url" id="website" name="website" class="form-input" placeholder="https://yourwebsite.com">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="service" class="form-label">What service are you interested in? *</label>
-                            <select id="service" name="service" class="form-select" required>
-                                <option value="">Select a service...</option>
-                                <option value="Website Development">Website Development ($1,500 - $8,000+)</option>
-                                <option value="App Development">App Development ($5,000 - $25,000+)</option>
-                                <option value="Branding & Design">Branding & Design ($1,000 - $5,000)</option>
-                                <option value="IT Support">IT Support ($150 - $500/month)</option>
-                                <option value="Multiple Services">Multiple Services</option>
-                                <option value="Not Sure">Not Sure - Need Consultation</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="budget" class="form-label">What's your budget range? *</label>
-                            <select id="budget" name="budget" class="form-select" required>
-                                <option value="">Select budget range...</option>
-                                <option value="Under $2,000">Under $2,000</option>
-                                <option value="$2,000 - $5,000">$2,000 - $5,000</option>
-                                <option value="$5,000 - $10,000">$5,000 - $10,000</option>
-                                <option value="$10,000 - $25,000">$10,000 - $25,000</option>
-                                <option value="$25,000+">$25,000+</option>
-                                <option value="Flexible">Flexible / Need Guidance</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="timeline" class="form-label">When do you need this completed?</label>
-                            <select id="timeline" name="timeline" class="form-select">
-                                <option value="">Select timeline...</option>
-                                <option value="ASAP">ASAP (Rush - additional fees may apply)</option>
-                                <option value="2-4 weeks">2-4 weeks</option>
-                                <option value="1-2 months">1-2 months</option>
-                                <option value="2-3 months">2-3 months</option>
-                                <option value="3+ months">3+ months</option>
-                                <option value="Flexible">Flexible / No Rush</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="description" class="form-label">Tell us about your project *</label>
-                            <textarea id="description" name="description" class="form-textarea" required placeholder="Describe what you're looking to build, any specific features you need, problems you're trying to solve, or goals you want to achieve..." rows="5"></textarea>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="referral" class="form-label">How did you hear about us?</label>
-                            <select id="referral" name="referral" class="form-select">
-                                <option value="">Select one...</option>
-                                <option value="Google Search">Google Search</option>
-                                <option value="Social Media">Social Media</option>
-                                <option value="Referral">Referral from Friend/Colleague</option>
-                                <option value="LinkedIn">LinkedIn</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group" style="margin-top: 1.5rem;">
-                            <label style="display: flex; align-items: flex-start; gap: 0.75rem; cursor: pointer;">
-                                <input type="checkbox" name="agreement" required style="width: auto; margin-top: 0.25rem;">
-                                <span style="font-size: 0.875rem; color: var(--color-gray-600); line-height: 1.5;">I agree to be contacted regarding my project inquiry. *</span>
-                            </label>
-                        </div>
-                        
-                        <button type="submit" class="btn btn--primary btn--lg" style="width: 100%; margin-top: 1rem;">
-                            Submit Project Inquiry
-                            <svg class="btn__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                        </button>
-                    </form>
+
+            <!-- Section 2: Project Details -->
+            <div class="form-section">
+              <h3 class="form-section-title">Project Details</h3>
+
+              <div class="form-group">
+                <label class="form-label">What type of project do you need? <span class="required">*</span></label>
+                <p class="form-helper">Select all that apply</p>
+                <div class="checkbox-group">
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="service-website" name="services[]" value="Website Development">
+                    <label for="service-website">Website Development</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="service-webapp" name="services[]" value="Web Application">
+                    <label for="service-webapp">Web Application</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="service-ios" name="services[]" value="iOS Mobile App">
+                    <label for="service-ios">iOS Mobile App</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="service-android" name="services[]" value="Android Mobile App">
+                    <label for="service-android">Android Mobile App</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="service-automation" name="services[]" value="Business Automation">
+                    <label for="service-automation">Business Automation</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="service-ai" name="services[]" value="AI Integration">
+                    <label for="service-ai">AI Integration</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="service-branding" name="services[]" value="Branding & Design">
+                    <label for="service-branding">Branding & Design</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="service-support" name="services[]" value="IT Support">
+                    <label for="service-support">IT Support</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="service-other" name="services[]" value="Other">
+                    <label for="service-other">Other</label>
+                  </div>
                 </div>
-                
-                <div class="contact-info">
-                    <div class="contact-info-card">
-                        <h3>What Happens Next?</h3>
-                        <div class="contact-steps">
-                            <div class="contact-step"><div class="contact-step__number">1</div><div><strong>We Review</strong><p>We'll review your project details within 24 hours.</p></div></div>
-                            <div class="contact-step"><div class="contact-step__number">2</div><div><strong>Discovery Call</strong><p>We'll schedule a free 30-minute call to discuss your needs.</p></div></div>
-                            <div class="contact-step"><div class="contact-step__number">3</div><div><strong>Proposal</strong><p>You'll receive a detailed proposal with timeline and pricing.</p></div></div>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-info-card">
-                        <h3>Contact Information</h3>
-                        <div class="contact-info-items">
-                            <div class="contact-info-item">
-                                <div class="contact-info-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
-                                <div><span class="contact-info-label">Email</span><a href="mailto:info@nexustechdigitalsolutions.net" class="contact-info-value">info@nexustechdigitalsolutions.net</a></div>
-                            </div>
-                            <div class="contact-info-item">
-                                <div class="contact-info-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
-                                <div><span class="contact-info-label">Phone</span><a href="tel:+12027094556" class="contact-info-value">(202) 709-4556</a></div>
-                            </div>
-                            <div class="contact-info-item">
-                                <div class="contact-info-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
-                                <div><span class="contact-info-label">Location</span><span class="contact-info-value">Norfolk, Virginia</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-info-card contact-info-card--dark">
-                        <h3>Why Work With Us?</h3>
-                        <ul class="contact-benefits">
-                            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>10+ years tech experience</li>
-                            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Transparent, fixed pricing</li>
-                            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>30-day post-launch support</li>
-                            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Direct founder communication</li>
-                            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Satisfaction guarantee</li>
-                        </ul>
-                    </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Describe your project <span class="required">*</span></label>
+                <p class="form-helper">What are you trying to build? What problem does it solve? Who is your target audience?</p>
+                <textarea name="project_description" class="form-textarea" placeholder="Tell us about your project..." required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Key features or functionality needed</label>
+                <p class="form-helper">Examples: user login, payment processing, booking system, dashboard, etc.</p>
+                <textarea name="features" class="form-textarea" placeholder="List the main features you need..." style="min-height: 100px;"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Do you have existing designs or mockups?</label>
+                <div class="radio-group">
+                  <div class="radio-item">
+                    <input type="radio" id="designs-yes" name="has_designs" value="Yes, I have designs ready">
+                    <label for="designs-yes">Yes, I have designs ready</label>
+                  </div>
+                  <div class="radio-item">
+                    <input type="radio" id="designs-some" name="has_designs" value="I have some ideas/sketches">
+                    <label for="designs-some">I have some ideas/sketches</label>
+                  </div>
+                  <div class="radio-item">
+                    <input type="radio" id="designs-no" name="has_designs" value="No, I need design help">
+                    <label for="designs-no">No, I need design help</label>
+                  </div>
                 </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Is this a new project or existing?</label>
+                <div class="radio-group">
+                  <div class="radio-item">
+                    <input type="radio" id="project-new" name="project_type" value="Brand new project">
+                    <label for="project-new">Brand new project</label>
+                  </div>
+                  <div class="radio-item">
+                    <input type="radio" id="project-redesign" name="project_type" value="Redesign/rebuild of existing">
+                    <label for="project-redesign">Redesign/rebuild of existing</label>
+                  </div>
+                  <div class="radio-item">
+                    <input type="radio" id="project-add" name="project_type" value="Adding features to existing">
+                    <label for="project-add">Adding features to existing</label>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <!-- Section 3: Timeline & Budget -->
+            <div class="form-section">
+              <h3 class="form-section-title">Timeline & Budget</h3>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">What's your timeline?</label>
+                  <select name="timeline" class="form-select">
+                    <option value="">Select timeline...</option>
+                    <option value="ASAP / Rush">ASAP / Rush</option>
+                    <option value="1-2 months">1-2 months</option>
+                    <option value="2-3 months">2-3 months</option>
+                    <option value="3-6 months">3-6 months</option>
+                    <option value="6+ months">6+ months</option>
+                    <option value="Flexible / No rush">Flexible / No rush</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">What's your budget range?</label>
+                  <select name="budget" class="form-select">
+                    <option value="">Select budget...</option>
+                    <option value="Under $2,500">Under $2,500</option>
+                    <option value="$2,500 - $5,000">$2,500 - $5,000</option>
+                    <option value="$5,000 - $10,000">$5,000 - $10,000</option>
+                    <option value="$10,000 - $25,000">$10,000 - $25,000</option>
+                    <option value="$25,000 - $50,000">$25,000 - $50,000</option>
+                    <option value="$50,000+">$50,000+</option>
+                    <option value="Not sure yet">Not sure yet</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">How did you hear about us?</label>
+                <select name="referral_source" class="form-select">
+                  <option value="">Select one...</option>
+                  <option value="Google Search">Google Search</option>
+                  <option value="Social Media (Instagram/Facebook)">Social Media (Instagram/Facebook)</option>
+                  <option value="Referral from someone">Referral from someone</option>
+                  <option value="LinkedIn">LinkedIn</option>
+                  <option value="Government contract database">Government contract database</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Anything else you'd like us to know?</label>
+                <textarea name="additional_info" class="form-textarea" placeholder="Any other details, questions, or context..." style="min-height: 100px;"></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Submit Project Inquiry</button>
+            <p style="text-align: center; font-size: 0.875rem; color: var(--color-gray-400); margin-top: 1rem;">We'll respond within 24 hours.</p>
+          </form>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__grid">
-                <div class="footer__brand"><a href="index.html" class="nav__logo"><img src="images/logo.png" alt="Nexus Tech Digital Solutions" class="nav__logo-img"></a><p>Professional digital solutions for growing businesses.</p></div>
-                <div class="footer__column"><h4 class="footer__title">Services</h4><div class="footer__links"><a href="services.html#websites">Website Development</a><a href="services.html#apps">App Development</a><a href="services.html#branding">Branding & Design</a><a href="services.html#support">IT Support</a></div></div>
-                <div class="footer__column"><h4 class="footer__title">Company</h4><div class="footer__links"><a href="about.html">About Us</a><a href="portfolio.html">Portfolio</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div></div>
-                <div class="footer__column"><h4 class="footer__title">Legal</h4><div class="footer__links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="login.html">Client Portal</a></div></div>
-            </div>
-            <div class="footer__bottom"><p>&copy; 2024 Nexus Tech Digital Solutions. All rights reserved.</p></div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">N</div>
+            <span>Nexus Tech</span>
+          </a>
+          <p>Custom websites, mobile apps, and automation solutions—built by engineers who understand what growing businesses actually need.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/nexustechdigitalsolutions" target="_blank" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.facebook.com/share/1De6QUqb3s/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+          </div>
         </div>
-    </footer>
+        <div>
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#websites">Website Development</a></li>
+            <li><a href="services.html#mobile">Mobile Apps</a></li>
+            <li><a href="services.html#automation">Business Automation</a></li>
+            <li><a href="services.html#branding">Branding & Design</a></li>
+            <li><a href="services.html#support">IT Support</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="government.html">Government</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:info@nexustechdigitalsolutions.net">info@nexustechdigitalsolutions.net</a></li>
+            <li><a href="tel:+12027094556">(202) 709-4556</a></li>
+            <li>Norfolk, Virginia</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Nexus Tech Digital Solutions. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
-    <script src="js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get('success') === 'true') {
-                document.getElementById('formSuccess').style.display = 'block';
-                document.getElementById('contactForm').style.display = 'none';
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-            const service = urlParams.get('service');
-            if (service) {
-                const serviceSelect = document.getElementById('service');
-                if (serviceSelect) {
-                    for (let option of serviceSelect.options) {
-                        if (option.value.toLowerCase().includes(service.toLowerCase())) {
-                            option.selected = true;
-                            break;
-                        }
-                    }
-                }
-            }
-        });
-    </script>
+  <script>
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    mobileMenuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('active'));
+  </script>
 </body>
 </html>

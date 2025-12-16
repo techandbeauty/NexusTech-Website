@@ -1,283 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional web development, app development, branding, and IT support services. Transparent pricing and dedicated support.">
-    <title>Services | Nexus Tech Digital Solutions</title>
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231A365D' rx='8' width='100' height='100'/><text x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>N</text></svg>">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Software development services - websites, mobile apps, automation, branding, and IT support from Nexus Tech Digital Solutions.">
+  <title>Services | Nexus Tech Digital Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav" id="nav">
-        <div class="container">
-            <div class="nav__inner">
-                <a href="index.html" class="nav__logo">
-                    <img src="images/logo.png" alt="Nexus Tech Digital Solutions" class="nav__logo-img">
-                </a>
-                
-                <div class="nav__menu">
-                    <a href="index.html" class="nav__link">Home</a>
-                    <a href="about.html" class="nav__link">About</a>
-                    <a href="services.html" class="nav__link nav__link--active">Services</a>
-                    <a href="portfolio.html" class="nav__link">Portfolio</a>
-                    <a href="faq.html" class="nav__link">FAQ</a>
-                </div>
-                
-                <a href="contact.html" class="btn btn--primary nav__cta">Get Started</a>
-                
-                <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
-    
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="index.html" class="mobile-menu__link">Home</a>
-        <a href="about.html" class="mobile-menu__link">About</a>
-        <a href="services.html" class="mobile-menu__link">Services</a>
-        <a href="portfolio.html" class="mobile-menu__link">Portfolio</a>
-        <a href="faq.html" class="mobile-menu__link">FAQ</a>
-        <a href="contact.html" class="mobile-menu__link">Contact</a>
-        <a href="login.html" class="mobile-menu__link">Client Portal</a>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">N</div>
+          <span>Nexus Tech</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="services.html" class="nav-link active">Services</a></li>
+            <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+            <li><a href="faq.html" class="nav-link">FAQ</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+          <a href="book.html" class="btn btn-primary">Book Consultation</a>
+        </nav>
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
+  </header>
 
-    <!-- Page Header -->
-    <header class="page-header">
-        <div class="container">
-            <h1 class="page-header__title">Our Services</h1>
-            <p class="page-header__subtitle">Professional digital solutions tailored to your business needs. Fixed pricing, no hidden fees.</p>
+  <div class="mobile-menu">
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <a href="about.html" class="mobile-nav-link">About</a>
+    <a href="services.html" class="mobile-nav-link">Services</a>
+    <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
+    <a href="faq.html" class="mobile-nav-link">FAQ</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+    <a href="book.html" class="mobile-nav-link">Book Consultation</a>
+  </div>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Our Services</h1>
+      <p class="lead">End-to-end digital solutions tailored to your business needs.</p>
+    </div>
+  </section>
+
+  <!-- Website Development -->
+  <section class="section" id="websites">
+    <div class="container">
+      <div class="grid grid-2" style="gap: 4rem; align-items: center;">
+        <div>
+          <span class="section-label">Service</span>
+          <h2>Website Development</h2>
+          <p>Custom websites built from scratch—no templates, no page builders. Every site is designed for your specific business goals, optimized for search engines, and built to convert visitors into customers.</p>
+          <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">What's Included:</h4>
+          <ul style="color: var(--color-gray-600);">
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> Custom responsive design</li>
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> SEO optimization</li>
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> Mobile-first development</li>
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> Contact forms & lead capture</li>
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> Analytics integration</li>
+            <li style="padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> 30-day post-launch support</li>
+          </ul>
+          <p style="margin-top: 1.5rem;"><strong style="color: var(--color-accent);">Starting at $2,500</strong></p>
+          <a href="book.html" class="btn btn-primary" style="margin-top: 1rem;">Get a Quote</a>
         </div>
-    </header>
-
-    <!-- Website Development -->
-    <section class="section" id="websites">
-        <div class="container">
-            <div class="service-detail__grid">
-                <div class="service-detail__content">
-                    <span class="section-label">Service</span>
-                    <h2>Website Development</h2>
-                    <p>Your website is often the first impression potential customers have of your business. We build professional, fast, and mobile-responsive websites that convert visitors into customers.</p>
-                    
-                    <p>Whether you need a simple landing page or a full e-commerce solution, we deliver clean, modern designs backed by solid technology. Every website we build is optimized for search engines and designed to grow with your business.</p>
-                    
-                    <h3>What's Included</h3>
-                    <ul>
-                        <li>Custom design tailored to your brand</li>
-                        <li>Mobile-responsive layout</li>
-                        <li>Search engine optimization (SEO)</li>
-                        <li>Contact forms and lead capture</li>
-                        <li>Fast loading performance</li>
-                        <li>SSL security certificate</li>
-                        <li>30 days of post-launch support</li>
-                    </ul>
-                    
-                    <h3>Technologies We Use</h3>
-                    <p>HTML5, CSS3, JavaScript, React, Next.js, WordPress, Shopify, Netlify, Firebase, Stripe integration, and more.</p>
-                </div>
-                
-                <div class="service-sidebar">
-                    <div class="service-sidebar__card">
-                        <h3>Website Development</h3>
-                        <div class="service-sidebar__price">$1,500 - $8,000+ <span>depending on scope</span></div>
-                        <ul class="service-sidebar__list">
-                            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>2-6 week delivery</li>
-                            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Unlimited revisions</li>
-                            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>30-day support included</li>
-                            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>SEO optimized</li>
-                        </ul>
-                        <a href="contact.html?service=website" class="btn btn--primary">Get a Quote</a>
-                    </div>
-                </div>
-            </div>
+        <div style="background: linear-gradient(135deg, var(--color-off-white) 0%, var(--color-light-gray) 100%); border-radius: var(--radius-lg); height: 350px; display: flex; align-items: center; justify-content: center;">
+          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-accent);"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- App Development -->
-    <section class="section section--gray" id="apps">
-        <div class="container">
-            <div class="service-detail__grid">
-                <div class="service-detail__content">
-                    <span class="section-label">Service</span>
-                    <h2>App Development</h2>
-                    <p>Turn your app idea into reality. We develop native and cross-platform mobile applications for iOS and Android that users love.</p>
-                    
-                    <p>From concept to launch, we handle the entire development process. Whether you need a customer-facing app, an internal tool, or a productivity application, we build solutions that work reliably and scale with your needs.</p>
-                    
-                    <h3>What's Included</h3>
-                    <ul>
-                        <li>iOS and Android development</li>
-                        <li>UI/UX design</li>
-                        <li>Backend API development</li>
-                        <li>Database design and integration</li>
-                        <li>Push notifications</li>
-                        <li>App Store submission</li>
-                        <li>30 days of post-launch support</li>
-                    </ul>
-                    
-                    <h3>Technologies We Use</h3>
-                    <p>Swift, SwiftUI, React Native, Flutter, Firebase, Node.js, Python, PostgreSQL, and modern cloud infrastructure.</p>
-                </div>
-                
-                <div class="service-sidebar">
-                    <div class="service-sidebar__card">
-                        <h3>App Development</h3>
-                        <div class="service-sidebar__price">$5,000 - $25,000+ <span>depending on scope</span></div>
-                        <ul class="service-sidebar__list">
-                            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>4-12 week delivery</li>
-                            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>iOS & Android</li>
-                            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Backend included</li>
-                            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>App store submission</li>
-                        </ul>
-                        <a href="contact.html?service=app" class="btn btn--primary">Get a Quote</a>
-                    </div>
-                </div>
-            </div>
+  <!-- Mobile App Development -->
+  <section class="section section-gray" id="mobile">
+    <div class="container">
+      <div class="grid grid-2" style="gap: 4rem; align-items: center;">
+        <div style="background: linear-gradient(135deg, var(--color-white) 0%, var(--color-light-gray) 100%); border-radius: var(--radius-lg); height: 350px; display: flex; align-items: center; justify-content: center; order: 1;">
+          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-accent);"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
         </div>
-    </section>
-
-    <!-- Branding -->
-    <section class="section" id="branding">
-        <div class="container">
-            <div class="service-detail__grid">
-                <div class="service-detail__content">
-                    <span class="section-label">Service</span>
-                    <h2>Branding & Design</h2>
-                    <p>Your brand is more than just a logo—it's the complete experience people have with your business. We create cohesive brand identities that resonate with your target audience.</p>
-                    
-                    <h3>What's Included</h3>
-                    <ul>
-                        <li>Logo design (multiple concepts)</li>
-                        <li>Color palette and typography</li>
-                        <li>Brand guidelines document</li>
-                        <li>Business card design</li>
-                        <li>Social media templates</li>
-                        <li>Letterhead and email signature</li>
-                        <li>Source files and all assets</li>
-                    </ul>
-                </div>
-                
-                <div class="service-sidebar">
-                    <div class="service-sidebar__card">
-                        <h3>Branding & Design</h3>
-                        <div class="service-sidebar__price">$1,000 - $5,000 <span>depending on scope</span></div>
-                        <ul class="service-sidebar__list">
-                            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>1-3 week delivery</li>
-                            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Multiple concepts</li>
-                            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Brand guidelines</li>
-                            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>All source files</li>
-                        </ul>
-                        <a href="contact.html?service=branding" class="btn btn--primary">Get a Quote</a>
-                    </div>
-                </div>
-            </div>
+        <div style="order: 2;">
+          <span class="section-label">Service</span>
+          <h2>Mobile App Development</h2>
+          <p>Native iOS and Android applications built with Swift/SwiftUI and Kotlin. We create apps that users love—fast, intuitive, and designed for engagement.</p>
+          <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">What's Included:</h4>
+          <ul style="color: var(--color-gray-600);">
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> Native iOS or Android development</li>
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> UI/UX design</li>
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> Backend/API integration</li>
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> App Store submission</li>
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> Push notifications</li>
+            <li style="padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> 60-day post-launch support</li>
+          </ul>
+          <p style="margin-top: 1.5rem;"><strong style="color: var(--color-accent);">Starting at $10,000</strong></p>
+          <a href="book.html" class="btn btn-primary" style="margin-top: 1rem;">Get a Quote</a>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- IT Support -->
-    <section class="section section--gray" id="support">
-        <div class="container">
-            <div class="service-detail__grid">
-                <div class="service-detail__content">
-                    <span class="section-label">Service</span>
-                    <h2>IT & Technical Support</h2>
-                    <p>Keep your technology running smoothly with dedicated technical support. We provide ongoing maintenance, troubleshooting, and technical guidance for businesses of all sizes.</p>
-                    
-                    <h3>What's Included</h3>
-                    <ul>
-                        <li>Remote technical support</li>
-                        <li>Software installation and updates</li>
-                        <li>Security monitoring and updates</li>
-                        <li>Backup and recovery solutions</li>
-                        <li>Email and productivity setup</li>
-                        <li>Hardware recommendations</li>
-                        <li>Priority response times</li>
-                    </ul>
-                </div>
-                
-                <div class="service-sidebar">
-                    <div class="service-sidebar__card">
-                        <h3>IT Support Plans</h3>
-                        <div class="service-sidebar__price">$150 - $500 <span>per month</span></div>
-                        <ul class="service-sidebar__list">
-                            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Same-day response</li>
-                            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Remote support included</li>
-                            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Security monitoring</li>
-                            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Monthly check-ins</li>
-                        </ul>
-                        <a href="contact.html?service=support" class="btn btn--primary">Get Started</a>
-                    </div>
-                </div>
-            </div>
+  <!-- Business Automation -->
+  <section class="section" id="automation">
+    <div class="container">
+      <div class="grid grid-2" style="gap: 4rem; align-items: center;">
+        <div>
+          <span class="section-label">Service</span>
+          <h2>Business Automation</h2>
+          <p>Stop wasting time on repetitive tasks. We build custom automation workflows that connect your tools, streamline operations, and free up your team to focus on what matters.</p>
+          <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">What's Included:</h4>
+          <ul style="color: var(--color-gray-600);">
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> Workflow analysis & design</li>
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> Custom integrations (Zapier, Make, custom APIs)</li>
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> CRM automation</li>
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> Email sequences & lead nurturing</li>
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> Reporting dashboards</li>
+            <li style="padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> Training & documentation</li>
+          </ul>
+          <p style="margin-top: 1.5rem;"><strong style="color: var(--color-accent);">Starting at $1,500</strong></p>
+          <a href="book.html" class="btn btn-primary" style="margin-top: 1rem;">Get a Quote</a>
         </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="section cta">
-        <div class="container">
-            <h2>Not Sure Which Service You Need?</h2>
-            <p>Book a free consultation and we'll help you figure out the best solution for your business.</p>
-            <div class="cta__actions">
-                <a href="contact.html" class="btn btn--white btn--lg">Schedule a Call</a>
-            </div>
+        <div style="background: linear-gradient(135deg, var(--color-off-white) 0%, var(--color-light-gray) 100%); border-radius: var(--radius-lg); height: 350px; display: flex; align-items: center; justify-content: center;">
+          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-accent);"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__grid">
-                <div class="footer__brand">
-                    <a href="index.html" class="nav__logo"><img src="images/logo.png" alt="Nexus Tech Digital Solutions" class="nav__logo-img"></a>
-                    <p>Professional digital solutions for growing businesses.</p>
-                </div>
-                <div class="footer__column">
-                    <h4 class="footer__title">Services</h4>
-                    <div class="footer__links">
-                        <a href="services.html#websites">Website Development</a>
-                        <a href="services.html#apps">App Development</a>
-                        <a href="services.html#branding">Branding & Design</a>
-                        <a href="services.html#support">IT Support</a>
-                    </div>
-                </div>
-                <div class="footer__column">
-                    <h4 class="footer__title">Company</h4>
-                    <div class="footer__links">
-                        <a href="about.html">About Us</a>
-                        <a href="portfolio.html">Portfolio</a>
-                        <a href="faq.html">FAQ</a>
-                        <a href="contact.html">Contact</a>
-                    </div>
-                </div>
-                <div class="footer__column">
-                    <h4 class="footer__title">Legal</h4>
-                    <div class="footer__links">
-                        <a href="privacy.html">Privacy Policy</a>
-                        <a href="terms.html">Terms of Service</a>
-                        <a href="login.html">Client Portal</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p>&copy; 2024 Nexus Tech Digital Solutions. All rights reserved.</p>
-            </div>
+  <!-- Branding & Design -->
+  <section class="section section-gray" id="branding">
+    <div class="container">
+      <div class="grid grid-2" style="gap: 4rem; align-items: center;">
+        <div style="background: linear-gradient(135deg, var(--color-white) 0%, var(--color-light-gray) 100%); border-radius: var(--radius-lg); height: 350px; display: flex; align-items: center; justify-content: center; order: 1;">
+          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-accent);"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
         </div>
-    </footer>
+        <div style="order: 2;">
+          <span class="section-label">Service</span>
+          <h2>Branding & Design</h2>
+          <p>Your brand is more than a logo—it's how customers perceive you. We create cohesive brand identities that communicate your values and stand out in crowded markets.</p>
+          <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">What's Included:</h4>
+          <ul style="color: var(--color-gray-600);">
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> Logo design (multiple concepts)</li>
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> Color palette & typography</li>
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> Brand style guide</li>
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> Business card design</li>
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> Social media templates</li>
+            <li style="padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> All source files included</li>
+          </ul>
+          <p style="margin-top: 1.5rem;"><strong style="color: var(--color-accent);">Starting at $1,500</strong></p>
+          <a href="book.html" class="btn btn-primary" style="margin-top: 1rem;">Get a Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="js/main.js"></script>
+  <!-- IT Support -->
+  <section class="section" id="support">
+    <div class="container">
+      <div class="grid grid-2" style="gap: 4rem; align-items: center;">
+        <div>
+          <span class="section-label">Service</span>
+          <h2>IT & Tech Support</h2>
+          <p>Keep your technology running smoothly with ongoing support, maintenance, and security updates. We're your on-call tech team without the overhead of full-time staff.</p>
+          <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">What's Included:</h4>
+          <ul style="color: var(--color-gray-600);">
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> Website maintenance & updates</li>
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> Security monitoring</li>
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> Backup management</li>
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> Performance optimization</li>
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> Technical troubleshooting</li>
+            <li style="padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> Priority response times</li>
+          </ul>
+          <p style="margin-top: 1.5rem;"><strong style="color: var(--color-accent);">Starting at $500/month</strong></p>
+          <a href="book.html" class="btn btn-primary" style="margin-top: 1rem;">Get a Quote</a>
+        </div>
+        <div style="background: linear-gradient(135deg, var(--color-off-white) 0%, var(--color-light-gray) 100%); border-radius: var(--radius-lg); height: 350px; display: flex; align-items: center; justify-content: center;">
+          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-accent);"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Integration -->
+  <section class="section section-gray" id="ai">
+    <div class="container">
+      <div class="grid grid-2" style="gap: 4rem; align-items: center;">
+        <div style="background: linear-gradient(135deg, var(--color-white) 0%, var(--color-light-gray) 100%); border-radius: var(--radius-lg); height: 350px; display: flex; align-items: center; justify-content: center; order: 1;">
+          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-accent);"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+        </div>
+        <div style="order: 2;">
+          <span class="section-label">Service</span>
+          <h2>AI Integration</h2>
+          <p>Leverage the power of artificial intelligence to automate tasks, enhance customer experiences, and unlock insights from your data. We integrate AI where it makes sense—not just because it's trendy.</p>
+          <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">What's Included:</h4>
+          <ul style="color: var(--color-gray-600);">
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> AI chatbots & assistants</li>
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> Content generation tools</li>
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> Data analysis & insights</li>
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> Process automation with AI</li>
+            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> API integrations (OpenAI, Claude, etc.)</li>
+            <li style="padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-success);">✓</span> Custom AI solutions</li>
+          </ul>
+          <p style="margin-top: 1.5rem;"><strong style="color: var(--color-accent);">Starting at $3,000</strong></p>
+          <a href="book.html" class="btn btn-primary" style="margin-top: 1rem;">Get a Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Not Sure What You Need?</h2>
+      <p>Let's talk. Schedule a free discovery call and we'll help you figure out the best approach for your business goals.</p>
+      <div class="cta-buttons">
+        <a href="book.html" class="btn btn-white btn-lg">Schedule Discovery Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">N</div>
+            <span>Nexus Tech</span>
+          </a>
+          <p>Custom websites, mobile apps, and automation solutions—built by engineers who understand what growing businesses actually need.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/nexustechdigitalsolutions" target="_blank" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.facebook.com/share/1De6QUqb3s/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#websites">Website Development</a></li>
+            <li><a href="services.html#mobile">Mobile Apps</a></li>
+            <li><a href="services.html#automation">Business Automation</a></li>
+            <li><a href="services.html#branding">Branding & Design</a></li>
+            <li><a href="services.html#support">IT Support</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="government.html">Government</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:info@nexustechdigitalsolutions.net">info@nexustechdigitalsolutions.net</a></li>
+            <li><a href="tel:+12027094556">(202) 709-4556</a></li>
+            <li>Norfolk, Virginia</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Nexus Tech Digital Solutions. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    mobileMenuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('active'));
+  </script>
 </body>
 </html>
