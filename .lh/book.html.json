@@ -3,11 +3,35 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1769796466327,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1769796497541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -176,9 +176,9 @@\n             <h4>\n               <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z\"></path><polyline points=\"22,6 12,13 2,6\"></polyline></svg>\n               Prefer Email?\n             </h4>\n-            <p><a href=\"mailto:info@nexustechdigitalsolutit\">info@nexustechdigitalsolutions.net</a></p>\n+            <p><a href=\"mailto:info@\">info@nexustechdigitalsolutions.net</a></p>\n           </div>\n \n           <div class=\"contact-card\">\n             <h4>\n"
+                },
+                {
+                    "date": 1769796519693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -176,9 +176,9 @@\n             <h4>\n               <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z\"></path><polyline points=\"22,6 12,13 2,6\"></polyline></svg>\n               Prefer Email?\n             </h4>\n-            <p><a href=\"mailto:info@\">info@nexustechdigitalsolutions.net</a></p>\n+            <p><a href=\"mailto:inftech 813@gmail.com@\">info@nexustechdigitalsolutions.net</a></p>\n           </div>\n \n           <div class=\"contact-card\">\n             <h4>\n"
+                },
+                {
+                    "date": 1769796525314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -176,9 +176,9 @@\n             <h4>\n               <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z\"></path><polyline points=\"22,6 12,13 2,6\"></polyline></svg>\n               Prefer Email?\n             </h4>\n-            <p><a href=\"mailto:inftech 813@gmail.com@\">info@nexustechdigitalsolutions.net</a></p>\n+            <p><a href=\"mailto:inftech necustech813@gmail.com@\">info@nexustechdigitalsolutions.net</a></p>\n           </div>\n \n           <div class=\"contact-card\">\n             <h4>\n"
+                },
+                {
+                    "date": 1769796535651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -176,9 +176,9 @@\n             <h4>\n               <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z\"></path><polyline points=\"22,6 12,13 2,6\"></polyline></svg>\n               Prefer Email?\n             </h4>\n-            <p><a href=\"mailto:inftech necustech813@gmail.com@\">info@nexustechdigitalsolutions.net</a></p>\n+            <p><a href=\"mailto: nexustech813@gmail.com@\">info@nexustechdigitalsolutions.net</a></p>\n           </div>\n \n           <div class=\"contact-card\">\n             <h4>\n"
+                },
+                {
+                    "date": 1769796559711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -176,9 +176,9 @@\n             <h4>\n               <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z\"></path><polyline points=\"22,6 12,13 2,6\"></polyline></svg>\n               Prefer Email?\n             </h4>\n-            <p><a href=\"mailto: nexustech813@gmail.com@\">info@nexustechdigitalsolutions.net</a></p>\n+            <p><a href=\"mailto: nexustech813@gmail.com\">send us a messsage</a></p>\n           </div>\n \n           <div class=\"contact-card\">\n             <h4>\n"
+                },
+                {
+                    "date": 1769796573589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -184,9 +184,9 @@\n             <h4>\n               <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\"></path></svg>\n               Call Us\n             </h4>\n-            <p><a href=\"tel:+12027094556\">(202) 709-4556</a></p>\n+            <p><a href=\"tel:+1\">(202) 709-4556</a></p>\n           </div>\n \n           <div class=\"info-box\" style=\"margin-top: 1.5rem;\">\n             <h4>🏛️ Government Contracting?</h4>\n"
                 }
             ],
             "date": 1769796466327,
